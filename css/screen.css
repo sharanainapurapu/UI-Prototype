@@ -1,0 +1,3179 @@
+.icon {
+    background: url(../i/sprite.png) no-repeat;
+}
+.icon2 {
+    background: url(../i/sprite2.png) no-repeat;
+}
+.icon3 {
+    background: url(../i/sprite4.png) no-repeat;
+}
+.icon4 {
+    background: url(../i/dp.png) no-repeat;
+}
+.icon5 {
+    background: url(../i/calendar-gray.png) no-repeat;
+}
+/* ipad portrait*/
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+    html.ipad,
+    body.ipad {
+        min-width: 768px;
+    }
+}
+/* ipad landscape*/
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+    html.ipad,
+    body.ipad {
+        min-width: 1024px;
+    }
+}
+.gray {
+    color: #727D83;
+}
+.unit {
+    font-size: 11px;
+}
+.dark-red {
+    color: #B83426;
+}
+.hide,
+.hide2 {
+    display: none;
+}
+.container {
+    width: 980px;
+    margin: 0 auto;
+    position: relative;
+}
+.login-header {
+    height: 125px;
+    padding: 40px 0;
+    box-shadow: 0 2px 2px #bdc6ce;
+    background-color: #606A70
+}
+.login-header .container {
+    text-align: center;
+}
+.login-header .container a.logo {
+    transition: none;
+    background: url(../i/login-logo.png) no-repeat;
+    width: 180px;
+    height: 45px;
+    background-position: -7px -17px;
+    margin: 7px auto 9px auto;
+    display: block;
+}
+.login-header .container span.title {
+    display: inline-block;
+    font-size: 15px;
+    color: black;
+    position: relative;
+    top: -2px;
+}
+.login-box {
+    width: 333px;
+    border: 1px solid #dae0e4;
+    margin: 0 auto;
+    min-height: 100px;
+    margin-top: 89px;
+    text-align: center;
+    padding: 40px 22px;
+    margin-bottom: 30px;
+}
+.login-box h2 {
+    font-size: 36px;
+    color: #3c4249;
+    letter-spacing: -1px;
+}
+.login-box .note {
+    font-size: 13px;
+    color: #75848c;
+    line-height: 21px;
+    letter-spacing: -0.5px;
+    display: inline-block;
+    padding: 10px 0;
+}
+.login-box form {
+    display: block;
+    padding-bottom: 20px;
+}
+.login-box form input,
+.login-box form select,
+.login-box form .ui-selectmenu-button {
+    margin-top: 13px;
+    width: 100%;
+    padding-left: 34px;
+}
+.login-box form .btn {
+    width: 100%;
+    margin-top: 25px;
+    border-radius: 0px
+}
+input[type=text],
+input[type=password],
+.ui-selectmenu-button {
+    border: 1px solid #c6cbce;
+    height: 37px;
+    padding: 8px 8px;
+    font-size: 12px;
+    color: #909090;
+    font-family: "Open Sans", sans-serif;
+    text-align: left;
+    background: #fff url("../i/input-icons.png") no-repeat 0 -1000px;
+   -webkit-text-fill-color: #fff;
+}
+input[type=text] {
+    background-position: 0 0;
+}
+input[type=password] {
+    background-position: 0 -37px;
+}
+.ui-selectmenu-button {
+    background-position: 0 -74px;
+    outline: none;
+}
+input.error {
+    border: 1px solid #f4433a;
+    box-shadow: 0 0 2px rgba(244, 67, 58, 0.66);
+}
+span.error-msg {
+    display: none;
+    color: #f4433a;
+    text-align: center;
+    font-size: 12px;
+    line-height: 24px;
+    height: 20px;
+}
+span.error-msg.error {
+    display: block;
+}
+.ui-selectmenu-button span.ui-selectmenu-text {
+    padding: 0;
+    font-weight: normal;
+    color: #909090;
+    line-height: 20px;
+}
+.ui-selectmenu-button.changed span.ui-selectmenu-text {
+    color: #909090;
+}
+.ui-selectmenu-menu .ui-menu {
+    padding-bottom: 0;
+}
+.ui-menu .ui-menu-item {
+    padding: 5px 8px;
+    height: 37px;
+    line-height: 27px;
+    background: #fff;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    font-weight: normal;
+    color: #909090;
+    font-size: 13px;
+}
+.ui-menu .ui-menu-item:last-child {
+    border-bottom: none;
+}
+.ui-menu .ui-menu-item.ui-state-focus {
+    background: #f5eeee;
+    margin: 0;
+}
+.ui-selectmenu-button span.ui-icon {
+    background: url("../i/input-icons.png") no-repeat -8px -120px;
+}
+/* main page styles */
+
+.dashboard {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    background: #606a70;
+    position: relative;
+    width: 100%;
+    padding-left: 55px;
+}
+.dashboard.ipad {
+    max-width: 768px;
+}
+.dashboard * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.dashboard.expand {
+    padding-left: 188px;
+}
+.dashboard.expand aside {
+    width: 188px;
+}
+.dashboard.expand aside .logo {
+    transition: none;
+    width: 105px;
+    height: 30px;
+    background-position: -36px -50px;
+    margin: 7px auto 9px auto;
+    display: block;
+}
+/* side bar */
+
+.dashboard aside {
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 55px;
+    overflow: hidden;
+    background: #606a70;
+}
+.dashboard aside .logo {
+    -moz-transition: none;
+    -webkit-transition: none;
+    -o-transition: none;
+    transition: none;
+    width: 32px;
+    height: 32px;
+    background-position: 0 0;
+    margin: 7px auto;
+    display: block;
+}
+.dashboard aside ul {
+    list-style: none;
+    width: 188px;
+}
+.dashboard aside ul li {
+    display: block;
+    line-height: 46px;
+    height: 46px;
+    background: #727d83;
+}
+.dashboard aside ul li.active {
+    background: #05bbd3;
+}
+.dashboard aside ul li a {
+    line-height: 46px;
+    font-size: 12px;
+    color: #ffffff;
+}
+.dashboard aside ul li a .icon,
+.dashboard aside ul li a .icon2,
+.dashboard aside ul li a .icon3,
+.dashboard aside ul li a .icon4 {
+    width: 32px;
+    height: 32px;
+    float: left;
+    margin: 7px 12px;
+    background-position: -32px 0;
+}
+.dashboard aside ul li a .icon4 {
+    background-position: -41px 1px;
+    background-size: 80px 31px;
+}
+.dashboard.expand aside ul li a .icon,
+.dashboard.expand aside ul li a .icon2,
+.dashboard.expand aside ul li a .icon3 {
+    width: 32px;
+    margin: 7px 12px;
+}
+.dashboard header ul li a .icon2 {
+    width: 32px;
+    height: 32px;
+    float: left;
+    margin: 7px 12px;
+    background-position: -32px 0;
+}
+.dashboard aside ul li a .icon.system-icon {
+    background-position: -64px 0;
+}
+.dashboard aside ul li a .icon2.ongaurd-icon {
+    background-position: -31px -58px;
+}
+.dashboard aside ul li a .icon2.area-utilization-icon {
+    background-position: -22px -17px;
+}
+.dashboard aside ul li a .icon2.area-utilization-icon-active {
+    background-position: -56px -18px;
+}
+.dashboard aside ul li a .icon2.database-server-icon {
+    background-position: -31px -107px;
+}
+.dashboard aside ul li a .icon2.communication-server-icon {
+    background-position: -128px -16px;
+}
+.dashboard header ul li a .icon2.settings-icon {
+    background-position: -165px -16px;
+}
+.dashboard header ul li a .icon2.avator-icon {
+    background-position: -237px -20px;
+}
+.dashboard aside ul.sub-menu li {
+    display: block;
+    line-height: 20px;
+    height: 26px;
+    padding-left: 25px;
+}
+.dashboard aside ul.sub-menu li.active {
+    background: #05bbd3;
+}
+.dashboard aside ul.sub-menu li a {
+    line-height: 0px;
+    font-size: 12px;
+    color: #ffffff;
+    margin-left: 32px;
+}
+.errorWarningBlock ul {
+    display: block;
+}
+.errorWarningBlock ul li{
+    display: block;
+    padding: 5px 18px;
+}
+.errorWarningBlock ul li:last-child{
+    border-bottom: none;
+}
+.errorWarningBlock ul li:hover{
+    background: #05BBD3;
+}
+.errorWarningBlock ul li a{
+    line-height: 18px;
+    color: #05BBD3;
+    font-size: 12px;
+    display: block;
+}
+.errorWarningBlock ul li:hover a{
+    color: white;
+}
+.errorWarningBlock ul li span{
+    line-height: 16px;
+    color: black;
+    font-size: 12px;
+    display: block;
+}
+
+.errorWarningBlock{
+    border-top: 1px solid #dcdbdc
+}
+
+.errcount{
+    display: inline-block;
+    margin-left: 5px;
+    color: #d84235;
+}
+
+/*main section */
+
+.dashboard .main-section {
+    position: relative;
+    width: 100%;
+    background: #f2f2f2;
+}
+.dashboard .overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 100;
+    background: rgba(128, 129, 132, 0.5);
+}
+.dashboard .main-section .overflow-hidden {
+    overflow: scroll;
+}
+.dashboard .main-section header {
+    height: 46px;
+    width: 100%;
+    background: #d84235;
+}
+.dashboard .main-section header .main-logo {
+    border-right: 2px solid #D03F31;
+    float: left;
+    width: 113px;
+    height: 46px;
+}
+.dashboard .main-section header .logo {
+    width: 135px;
+    height: 16px;
+    background-position: -195px -175px;
+    ;
+    float: left;
+    margin-top: 16px;
+    margin-left: 23px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 19px;
+    color: white;
+    font-weight: 100;
+}
+.dashboard .main-section header .logo span {
+    width: 40px;
+    height: 16px;
+    background-position: -293px -175px;
+    margin-left: 25px;
+    display: inline-block;
+}
+.dashboard .main-section header .indicators,
+.login-header .indicators {
+    float: right;
+    display: block;
+}
+.dashboard .main-section header .indicators li,
+.login-header .indicators li {
+    display: inline-block;
+    line-height: 46px;
+    padding: 0;
+    position: relative;
+    float: left;
+    border-left: 2px solid #D03F31;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+}
+.dashboard .main-section header .indicators li {
+    height: 45px;
+}
+.dashboard .main-section header .indicators li a {
+    display: block;
+    font-size: 13px;
+    color: #ffffff;
+    /*padding-left: 52px;*/
+}
+.dashboard .main-section header .indicators li a.calendar {
+    width: 58px;
+    padding: 0px;
+}
+.dashboard .main-section header .indicators li a.error {
+    width: 110px;
+    padding: 0px;
+    padding-left: 60px;
+}
+.dashboard .main-section header .indicators li a.date-range {
+    width: 134px;
+    padding: 0px;
+    text-align: center;
+}
+.dashboard .main-section header .indicators li a.warning {
+    width: 133px;
+    padding: 0px;
+    padding-left: 60px;
+}
+.dashboard .main-section header .indicators li a.settings {
+    width: 58px;
+    height: 45px;
+}
+.dashboard .main-section header .indicators li a.user {
+    width: 123px;
+    padding: 0px;
+}
+.dashboard .main-section header .indicators li a.calendar {
+    height: 45px;
+    padding: 15px 20px;
+}
+.dashboard .main-section header .indicators li a.calendar .icon {
+    width: 15px;
+    height: 17px;
+    background-position: -100px 0;
+    display: block;
+}
+.dashboard .main-section header .indicators li a.error:before,
+.dashboard .main-section header .indicators li a.warning:before {
+    display: inline-block;
+    position: absolute;
+    border-radius: 50px;
+    height: 23px;
+    width: 23px;
+    background: #ffffff;
+    text-align: center;
+    padding: 0 5px;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    content: attr(data-count);
+    line-height: 23px;
+    top: 13px;
+    min-width: 5px;
+    left: 17px;
+    /*
+          background: -webkit-linear-gradient(red, #ce090e, #ae0000); */
+    /* For Safari 5.1 to 6.0 */
+    /*
+
+          background: -o-linear-gradient(red, #ce090e, #ae0000); */
+    /* For Opera 11.1 to 12.0 */
+    /*
+
+          background: -moz-linear-gradient(red, #ce090e, #ae0000); */
+    /* For Firefox 3.6 to 15 */
+    /*
+
+          background: linear-gradient(red, #ce090e, #ae0000);
+*/
+    
+    background: #05bbd3;
+    /*box-shadow: 0px 0px 2px grey;*/
+}
+/*
+.dashboard .main-section header .indicators li a.warning:before{
+    background: #F6921E;
+}
+*/
+
+.dashboard .main-section header .indicators li a.error:before {
+    background: #B83426;
+}
+.dashboard .main-section header .indicators li a.error:hover:before,
+.dashboard .main-section header .indicators li a.warning:hover:before {
+    background: #D84235;
+}
+.dashboard .main-section header .indicators li a.error:hover,
+.dashboard .main-section header .indicators li a.warning:hover {
+    background-color: #B83426;
+}
+.dashboard .main-section header .indicators li a.settings:hover,
+.dashboard .main-section header .indicators li a.calendar:hover,
+.dashboard .main-section header .indicators li a.date-range:hover,
+.dashboard .main-section header .indicators li a.user:hover {
+    background-color: #B83426;
+}
+.dashboard .main-section header .indicators li a.calender {
+    float: right;
+    width: 58px;
+    height: 46px;
+    margin-right: 1px;
+    border-left: 1px solid #d03f31;
+}
+.dashboard .main-section header .indicators li a.calendar.active {
+    background-color: #B83426;
+}
+.dashboard .main-section header a.calender .icon {
+    width: 15px;
+    height: 17px;
+    background-position: -100px 0;
+    display: block;
+    margin: 14px auto;
+}
+.dashboard .main-section .section {
+    width: 100%;
+    padding: 1px 32px 10px 32px;
+}
+/* top two boxes */
+
+.dashboard .main-section .section .top-box {
+    width: 49%;
+    position: relative;
+    background: #BBBDBF;
+    border: 1px solid #dcdbdc;
+    margin-top: 10px;
+}
+.dashboard .main-section .section .top-box-1 {
+    position: relative;
+    background: none repeat scroll 0% 0% #fff;
+    border: 1px solid #dcdbdc;
+    border-image: none;
+    height: 100%;
+}
+.dashboard .main-section .section .top-box.top-full-box {
+    width: 100%;
+}
+.dashboard .main-section .section .top-box.mid-full-box {
+    margin-top: 30px;
+}
+.dashboard .main-section .section .first-two {
+    display: inline-block;
+    width: 66.6%;
+}
+.dashboard .main-section .section .all-three {
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    width: 100%;
+}
+.dashboard .main-section .section .single-row-table {
+    padding-top: 10px;
+    width: 100%;
+}
+.dashboard .main-section .section .first-two-different {
+    display: table-cell;
+    width: 69.6%;
+}
+.dashboard .main-section .section .top-box.left {
+    float: left;
+}
+.dashboard .main-section .section .top-box.right {
+    float: right;
+}
+.dashboard .main-section .section .top-box.mid-left {
+    width: 47.3%;
+    float: left;
+}
+.dashboard .main-section .section .mid-left-small {
+    -webkit-box-flex: 1;      /* OLD - iOS 6-, Safari 3.1-6 */
+    -moz-box-flex: 1;         /* OLD - Firefox 19- */
+    width: 20%;               /* For old syntax, otherwise collapses. */
+    -webkit-flex: 1;          /* Chrome */
+    -ms-flex: 1;              /* IE 10 */
+    flex: 1;  
+    padding-right: 30px;
+}
+.dashboard .main-section .section .left-small {
+    width: 50%;
+    display: table-cell;
+    padding-right: 10px;
+}
+.dashboard .main-section .section .top-box.mid-mid {
+    width: 47.3%;
+    float: right;
+}
+.dashboard .main-section .section .mid-mid-big {
+    -webkit-box-flex: 1;      /* OLD - iOS 6-, Safari 3.1-6 */
+    -moz-box-flex: 1;         /* OLD - Firefox 19- */
+    width: 20%;               /* For old syntax, otherwise collapses. */
+    -webkit-flex: 1;          /* Chrome */
+    -ms-flex: 1;              /* IE 10 */
+    flex: 1;  
+}
+.dashboard .main-section .section .right-big {
+    width: 50%;
+    display: table-cell;
+}
+.dashboard .main-section .section .top-box.mid-right {
+    width: 30%;
+    float: right;
+}
+.dashboard .main-section .section .mid-right-small {
+    -webkit-box-flex: 1;      /* OLD - iOS 6-, Safari 3.1-6 */
+    -moz-box-flex: 1;         /* OLD - Firefox 19- */
+    width: 20%;               /* For old syntax, otherwise collapses. */
+    -webkit-flex: 1;          /* Chrome */
+    -ms-flex: 1;              /* IE 10 */
+    flex: 1;  
+}
+.dashboard .main-section .section .top-box .icon,
+.dashboard .main-section .section .top-box .icon3,
+.dashboard .main-section .section .top-box-1 .icon,
+.dashboard .main-section .section .top-box-1 .icon3 {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    margin-top: -25px;
+    height: 50px;
+    width: 51px;
+    display: block;
+}
+.dashboard .main-section .section .top-box .icon.system-icon,
+.dashboard .main-section .section .top-box-1 .icon.system-icon {
+    background-position: -64px -80px;
+}
+.dashboard .main-section .section .top-box .icon.database-icon,
+.dashboard .main-section .section .top-box-1 .icon.database-icon {
+    background-position: 0 -80px;
+}
+.dashboard .main-section .section .top-box .icon3.hardware-icon,
+.dashboard .main-section .section .top-box-1 .icon3.hardware-icon {
+    background-position: -234px -79px;
+}
+.dashboard .main-section .section .top-box .description,
+.dashboard .main-section .section .top-box-1 .description {
+    width: 100%;
+    min-height: 125px;
+    background: #ffffff;
+    padding: 6px 0 0 0;
+}
+.dashboard .main-section .section .top-box.left .description,
+.dashboard .main-section .section .top-box.right .description {
+    padding-bottom: 20px;
+}
+.dashboard .main-section .section .top-box.right#db-server .description {
+    padding-bottom: 0px;
+}
+.dashboard .main-section .section .top-box .description h2,
+.dashboard .main-section .section .top-box-1 .description h2 {
+    font-size: 17px;
+    margin: 0;
+    padding: 0 0 5px 15px;
+    line-height: 20px;
+    color: #212121;
+}
+.dashboard .main-section .section .top-box .description .mid-part,
+.dashboard .main-section .section .top-box-1 .description .mid-part {
+    /*height: 85px;*/
+    
+    min-height: 85px;
+    height: auto;
+}
+.dashboard .main-section .section .top-box .description .mid-part.inline-block,
+.dashboard .main-section .section .top-box-1 .description .mid-part.inline-block {
+    display: inline-block;
+}
+.dashboard .main-section .section .top-box .description p,
+.dashboard .main-section .section .top-box-1 .description p {
+    font-size: 12px;
+    margin: 0;
+    padding: 0 5px 0 15px;
+    color: #757575;
+    line-height: 20px;
+    width: 100%;
+    word-break: break-all;
+    white-space: normal;
+}
+.dashboard .main-section .section .top-box .description p.short,
+.dashboard .main-section .section .top-box-1 .description p.short {
+    line-height: 11px;
+    padding-top: 10px;
+}
+.dashboard .main-section .section .top-box .description div.details-section,
+.dashboard .main-section .section .top-box-1 .description div.details-section {
+    margin-top: 8px;
+    line-height: 30px;
+    height: 38px;
+    border-top: 2px solid #dcdbdc;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
+.dashboard .main-section .section .top-box .description div.details-section a,
+.dashboard .main-section .section .top-box-1 .description div.details-section a {
+    font-weight: 500;
+    font-size: 11px;
+    margin: 0;
+    padding: 0 0 0 15px;
+    color: #05BBD3;
+}
+.dashboard .main-section .section .top-box .description div.details-section a:hover {
+    text-decoration: underline;
+}
+/* chart boxes */
+
+.dashboard .main-section .section .middle-box #performance-chart-bar {
+    height: 300px;
+}
+.dashboard .main-section .section .middle-box {
+    margin-top: 10px;
+    width: 100%;
+    padding: 15px 15px;
+    border: 1px solid #dcdbdc;
+    background: #ffffff;
+}
+.dashboard .main-section .section .middle-box.last-box {
+    margin-bottom: 40px;
+}
+.dashboard .main-section .section .middle-box-2 {
+    margin-bottom: 40px;
+    width: 100%;
+    margin-top: 16px;
+}
+.dashboard .main-section .section .middle-box.left {
+    width: 49%;
+    float: left;
+}
+.dashboard .main-section .section .middle-box.right {
+    width: 49%;
+    float: right;
+}
+.dashboard .main-section .section .middle-box .title {
+    line-height: 25px;
+}
+.dashboard .main-section .section .middle-box .title .date-range {
+    margin-left: 35px;
+    float: left;
+}
+.dashboard .main-section .section .middle-box .title h3 {
+    font-size: 17px;
+    margin: 0;
+    padding: 0;
+    line-height: 25px;
+    float: left;
+}
+.dashboard .main-section .section .middle-box .title small {
+    float: left;
+    color: #929497;
+    font-size: 12px;
+    line-height: 25px;
+    padding-top: 2px;
+    padding-left: 5px;
+}
+.dashboard .main-section .section .middle-box .title .calendar-icon {
+    background-position: -16px -11px;
+    height: 25px;
+    width: 17px;
+    margin: 0 7px 0 13px;
+    display: inline-block;
+}
+.dashboard .main-section .section .middle-box .title .date-picker {
+    border: 0;
+    width: 124px;
+    color: #757575;
+    height: 25px;
+    padding: 0 5px;
+    font-weight: 300;
+    border-bottom: 1px solid #f6f6f6;
+    background: url(../i/date-picker-arrow.png) right center no-repeat;
+}
+/* legend */
+
+.dashboard .main-section .section .middle-box .title .legend {
+    float: right;
+}
+.dashboard .main-section .section .middle-box .title .legend p {
+    display: inline-block;
+    font-size: 13px;
+    margin-right: 10px;
+    color: #757575;
+}
+.dashboard .main-section .section .middle-box .title .legend p span {
+    width: 11px;
+    height: 11px;
+    display: inline-block;
+    margin-left: 5px;
+    background: #C1B9DA;
+}
+.dashboard .main-section .section .middle-box .title .legend p span.first {
+    background: #6b77f3;
+}
+.dashboard .main-section .section .middle-box .title .legend p span.second {
+    background: #ffc91a;
+}
+.dashboard .main-section .section .middle-box .title .legend p span.third {
+    background: #77c216;
+}
+.dashboard .main-section .section .middle-box .title .legend p span.fourth {
+    background: #f05a92;
+}
+.dashboard .main-section .section .middle-box .title .legend p span.five {
+    background: #2336be;
+}
+.dashboard .main-section .section .middle-box .title .legend p span.six {
+    background: #18a611;
+}
+.dashboard .main-section .section .middle-box #performance-chart,
+.dashboard .main-section .section .middle-box #alarm-chart,
+.dashboard .main-section .section .middle-box #alarm-chart-type,
+.dashboard .main-section .section .middle-box #alarm-chart-status,
+.dashboard .main-section .section .middle-box #headquarters-chart,
+.dashboard .main-section .section .middle-box #carriers-chart,
+.dashboard .main-section .section .middle-box #lincolnton-chart,
+.dashboard .main-section .section .middle-box #secure-printing-chart {
+    height: 230px;
+}
+.dashboard .main-section .section .middle-box #error-log-chart-mainpage {
+    height: 170px;
+    margin: 20px 0 0 0;
+}
+.dashboard .main-section .section .middle-box .chart-holder {
+    height: 255px;
+    width: 100%;
+    padding: 0 20px;
+}
+.dashboard .main-section .section .middle-box .chart-holder .scroll-content {
+    width: 1800px;
+    height: 242px;
+    margin-left: -16px;
+}
+.dashboard .main-section .section .middle-box .chart-holder .scroll-content .chart {
+    width: 16.6%;
+    float: left;
+    height: 245px;
+    border-radius: 0 0 3px 3px;
+}
+.dashboard .main-section .section .middle-box .chart-holder .scroll-content .chart .total {
+    color: #4d5c74;
+    text-align: right;
+}
+.dashboard .main-section .section .middle-box .chart-holder .scroll-content .chart .total .count {
+    font-size: 14px;
+    font-weight: 600;
+}
+.dashboard .main-section .section .middle-box #onGuardAlarms .scroll-content {
+    width: 1500;
+    height: 250px;
+}
+.dashboard .main-section .section .middle-box #onGuardAlarms .scroll-content .alarm-chart {
+    width: 25%;
+    float: left;
+    height: 230px;
+    border-radius: 0 0 3px 3px;
+}
+.dashboard .main-section .section .middle-box .lower-head.text-center {
+    text-align: center;
+    margin-left: 25px;
+}
+.dashboard .main-section .section .middle-box .lower-head {
+    display: block;
+    height: 35px;
+}
+.dashboard .main-section .section .middle-box .lower-head .right-align {
+    float: right;
+    width: 300px;
+}
+.dashboard .main-section .section .middle-box .lower-head .alarm-icon {
+    background: url("../i/alarm.png") no-repeat;
+    width: 45px;
+    height: 30px;
+    background-size: 45px 30px;
+}
+.dashboard .main-section .section .middle-box .lower-head label {
+    font-size: 14px;
+    font: bold 12px Arial;
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    color: #B83426;
+    top: -25px;
+    position: relative;
+    left: 50px;
+}
+.dashboard .main-section .section .middle-box #alarm-chart1 .totalHolder,
+.dashboard .main-section .section .middle-box #alarm-chart2 .totalHolder,
+.dashboard .main-section .section .middle-box #alarm-chart3 .totalHolder,
+.dashboard .main-section .section .middle-box #alarm-chart4 .totalHolder,
+.dashboard .main-section .section .middle-box .alarm-chart .totalHolder {
+    position: relative;
+}
+.dashboard .main-section .section .middle-box #alarm-chart1 .total,
+.dashboard .main-section .section .middle-box #alarm-chart2 .total,
+.dashboard .main-section .section .middle-box #alarm-chart3 .total,
+.dashboard .main-section .section .middle-box #alarm-chart4 .total,
+.dashboard .main-section .section .middle-box .alarm-chart .total {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 11px;
+    color: #4d5c74;
+    text-align: right;
+}
+.dashboard .main-section .section .middle-box #alarm-chart1 .total .count,
+.dashboard .main-section .section .middle-box #alarm-chart2 .total .count,
+.dashboard .main-section .section .middle-box #alarm-chart3 .total .count,
+.dashboard .main-section .section .middle-box #alarm-chart4 .total .count,
+.dashboard .main-section .section .middle-box .alarm-chart .total .count {
+    font-size: 14px;
+    font-weight: 600;
+    display: block;
+}
+#archive-chart .labels {
+    position: relative;
+}
+#archive-chart .labels .archive {
+    position: absolute;
+    top: 100px;
+}
+#archive-chart .labels .archive span {
+    display: block;
+}
+#archive-chart .labels .archive span.date {
+    font-size: 15px;
+    font-weight: 600;
+    color: #656873;
+    line-height: 22px;
+}
+#archive-chart .labels .archive span.text {
+    font-size: 11px;
+    color: #6f7d95;
+}
+#archive-chart .labels .archive div.day {
+    font-size: 15px;
+    font-weight: 600;
+    color: #656873;
+    display: inline-block;
+}
+#archive-chart .labels .archive.last-archive {
+    left: 15px;
+}
+#archive-chart .labels .archive.today-archive {
+    right: 15px;
+}
+#archive-chart .labels .archive.days {
+    right: 15px;
+    top: 5px;
+    font-size: 11px;
+    color: #6f7d95;
+}
+.dashboard .main-section .section .middle-box table.service-monitor {
+    width: 100%;
+}
+.dashboard .main-section .section .middle-box table.service-monitor thead td {
+    height: 30px;
+    font-size: 11px;
+    color: #555d62;
+    padding: 0;
+    font-weight: 600;
+}
+.dashboard .main-section .section .middle-box table thead {
+    text-transform: uppercase;
+}
+/*
+.dashboard .main-section .section .middle-box table.service-monitor thead td.slider {
+  width: 160px;
+  text-align: right; }
+.dashboard .main-section .section .middle-box table.service-monitor thead td.cpu {
+  width: 65px; }
+.dashboard .main-section .section .middle-box table.service-monitor thead td.memory {
+  width: 75px; }
+.dashboard .main-section .section .middle-box table.service-monitor thead td.crashes {
+  width: 85px; }
+*/
+
+.dashboard .main-section .section .middle-box table.service-monitor tbody tr td {
+    font-size: 12px;
+    color: #6f7d95;
+    font-weight: 700;
+    height: 43px;
+    padding: 0;
+}
+.dashboard .main-section .section .middle-box table.service-monitor tbody tr td .service-slider {
+    width: 85px;
+    height: 7px;
+    display: block;
+}
+.dashboard .main-section .section .middle-box table.service-monitor tbody tr td .service-slider .slider {
+    border: none;
+    background: #c3cdd3;
+    height: 7px;
+    border-radius: 4px;
+}
+.dashboard .main-section .section .middle-box table.service-monitor tbody tr td .service-slider .slider .ui-slider-range {
+    background: #6B77F3
+    /*#319df9*/
+    
+    ;
+    border-radius: 4px;
+    height: 7px;
+}
+.dashboard .main-section .section .middle-box table.service-monitor tbody tr td .service-slider .slider .ui-slider-handle {
+    display: none;
+}
+.dashboard .main-section .section .middle-box table.service-monitor tbody tr td .today {
+    font-weight: normal;
+    font-size: 11px;
+}
+.dashboard .main-section .section .middle-box table.service-monitor tbody tr td:first-child {
+    color: #6F7D95;
+    /*text-transform: uppercase;*/
+    
+    font-size: 12px;
+    width: 35%
+}
+.dashboard .main-section .section .middle-box table.service-m-2 tbody tr td:first-child {
+    padding-left: 10px;
+    color: #555d62;
+    /*text-transform: uppercase;*/
+    
+    font-size: 11px;
+    width: 30%
+}
+.dashboard .main-section .section .middle-box table.service-monitor tbody tr td:nth-child(2),
+.dashboard .main-section .section .middle-box table.service-monitor thead tr td:nth-child(2) {
+    width: 20%;
+    text-align: center;
+}
+.dashboard .main-section .section .middle-box table.service-monitor tbody tr td:nth-child(3),
+.dashboard .main-section .section .middle-box table.service-monitor thead tr td:nth-child(3) {
+    width: 20%;
+    text-align: center;
+}
+.dashboard .main-section .section .middle-box table.service-monitor tbody tr td:nth-child(4),
+.dashboard .main-section .section .middle-box table.service-monitor thead tr td:nth-child(4) {
+    width: 10%;
+    text-align: center;
+}
+.dashboard .main-section .section .middle-box table.service-monitor tbody tr td:nth-child(5),
+.dashboard .main-section .section .middle-box table.service-monitor thead tr td:nth-child(5) {
+    width: 10%;
+    text-align: center;
+}
+.dashboard .main-section .section .middle-box table.service-m-2 tbody tr td:nth-child(2),
+.dashboard .main-section .section .middle-box table.service-m-2 thead tr td:nth-child(2) {
+    width: 20%;
+    text-align: center;
+}
+.dashboard .main-section .section .middle-box table.service-m-2 tbody tr td:nth-child(3),
+.dashboard .main-section .section .middle-box table.service-m-2 thead tr td:nth-child(3) {
+    width: 10%;
+    text-align: center;
+}
+.dashboard .main-section .section .middle-box table.service-m-2 tbody tr td:nth-child(4),
+.dashboard .main-section .section .middle-box table.service-m-2 thead tr td:nth-child(4) {
+    width: 12%;
+    text-align: center;
+}
+.dashboard .main-section .section .middle-box table.service-m-2 tbody tr td:nth-child(5),
+.dashboard .main-section .section .middle-box table.service-m-2 thead tr td:nth-child(5) {
+    width: 12%;
+    text-align: center;
+}
+.dashboard .main-section .section .middle-box table.service-monitor tbody tr td:last-child,
+.dashboard .main-section .section .middle-box table.service-monitor thead tr td:last-child {
+    width: 10%;
+    text-align: center;
+}
+.dashboard .main-section .section .middle-box table.service-monitor tbody tr.alt td {} .dashboard .main-section .section .middle-box table.security-kpi {
+    width: 100%;
+    display: block;
+    padding-top: 30px;
+}
+.dashboard .main-section .section .middle-box table.security-kpi thead td {
+    height: 30px;
+    font-size: 11px;
+    color: #555d62;
+    padding: 0;
+    font-weight: 600;
+}
+/*
+.dashboard .main-section .section .middle-box table.security-kpi thead td.slider {
+  width: 160px;
+  text-align: right; }
+.dashboard .main-section .section .middle-box table.security-kpi thead td.cpu {
+  width: 65px; }
+.dashboard .main-section .section .middle-box table.security-kpi thead td.memory {
+  width: 75px; }
+.dashboard .main-section .section .middle-box table.security-kpi thead td.crashes {
+  width: 85px; }
+*/
+
+.dashboard .main-section .section .middle-box table.security-kpi tbody tr td {
+    font-size: 12px;
+    color: #6f7d95;
+    font-weight: 700;
+    height: 43px;
+    padding: 0;
+}
+.dashboard .main-section .section .middle-box table.security-kpi tbody tr td .service-slider {
+    width: 85px;
+    height: 7px;
+    display: block;
+}
+.dashboard .main-section .section .middle-box table.security-kpi tbody tr td .service-slider .slider {
+    border: none;
+    background: #c3cdd3;
+    height: 7px;
+    border-radius: 4px;
+}
+.dashboard .main-section .section .middle-box table.security-kpi tbody tr td .service-slider .slider .ui-slider-range {
+    background: #6B77F3;
+    border-radius: 4px;
+    height: 7px;
+}
+.dashboard .main-section .section .middle-box table.security-kpi tbody tr td .service-slider .slider .ui-slider-handle {
+    display: none;
+}
+.dashboard .main-section .section .middle-box table.security-kpi tbody tr td .today {
+    font-weight: normal;
+    font-size: 11px;
+}
+.dashboard .main-section .section .middle-box table.security-kpi tbody tr td:first-child {
+    padding-left: 10px;
+    color: #555d62;
+    /*text-transform: uppercase;*/
+    
+    font-size: 12px;
+    width: 6%
+}
+.dashboard .main-section .section .middle-box table.security-kpi tbody tr td:nth-child(2),
+.dashboard .main-section .section .middle-box table.security-kpi thead tr td:nth-child(2) {
+    width: 1%;
+    text-align: center;
+}
+.dashboard .main-section .section .middle-box table.security-kpi tbody tr td:nth-child(3),
+.dashboard .main-section .section .middle-box table.security-kpi thead tr td:nth-child(3) {
+    width: 1%;
+    text-align: center;
+}
+.dashboard .main-section .section .middle-box table.security-kpi tbody tr td:nth-child(4),
+.dashboard .main-section .section .middle-box table.security-kpi thead tr td:nth-child(4) {
+    width: 1%;
+    text-align: center;
+}
+.dashboard .main-section .section .middle-box table.security-kpi tbody tr td:last-child,
+.dashboard .main-section .section .middle-box table.security-kpi thead tr td:last-child {
+    text-align: center;
+}
+.dashboard .main-section .section .middle-box table.security-kpi tbody tr.alt td {} .dashboard .main-section .section .middle-box table.service-m-2 tbody tr td:first-child {
+    padding-left: 10px;
+    color: #6F7D95;
+    /*text-transform: uppercase;*/
+    
+    font-size: 12px;
+    width: 50%
+}
+.dashboard .main-section .section .middle-box .inner-table {
+    width: 99%;
+    margin-top: 10px;
+}
+.dashboard .main-section .section .middle-box table.server-transaction {
+    width: 100%;
+}
+.dashboard .main-section .section .middle-box table.server-transaction thead tr td {
+    height: 48px;
+    font-size: 11px;
+    color: #555D62;
+    padding: 0;
+    vertical-align: middle;
+    font-weight: 600;
+    line-height: 10px;
+    text-align: center;
+}
+.dashboard .main-section .section .middle-box table.server-transaction tbody tr td {
+    font-size: 12px;
+    color: #6f7d95;
+    height: 48px;
+    font-weight: 700;
+    text-align: center;
+}
+.dashboard .main-section .section .height400 {
+    height: 400px;
+}
+.dashboard .main-section .section .height400 .middle-box {
+    height: 100%;
+}
+.dashboard .main-section .section .height400 .middle-box .inner {
+    height: 90%;
+}
+.dashboard .main-section .section .height300 {
+    height: 300px;
+}
+.dashboard .main-section .section .height300 .middle-box {
+    height: 100%;
+}
+.dashboard .main-section .section .height300 .middle-box .inner {
+    height: 90%;
+}
+.dashboard .main-section .section .height500 {
+    height: 380px;
+}
+.dashboard .main-section .section .height500 .middle-box {
+    height: 100%;
+}
+.dashboard .main-section .section .height500 .middle-box .inner {
+    height: 80%;
+    /*90*/
+}
+.dashboard .main-section .section .height500 .middle-box .inner #communication-server-error-chart {
+    height: 100%;
+    /*60*/
+}
+.dashboard .main-section .section .height500 .middle-box .inner #error-log-chart {
+    height: 100%;
+}
+.dashboard .main-section .section .middle-box #error-log-chart {
+    height: 100%;
+}
+.dashboard .main-section .section .middle-box #data-log-chart {
+    height: 321px;
+}
+.dashboard .main-section .section .middle-box #database-size-chart {
+    height: 350px;
+}
+.dashboard .main-section .section .middle-box .sqlBackup {
+    padding-left: 105px;
+    height: 100px;
+}
+.dashboard .main-section .section .middle-box .sqlBackup .db-details {
+    height: 50px;
+    border-bottom: 1px solid #dde6ec;
+    padding-top: 10px;
+    padding-left: 20px;
+    margin-right: 10px;
+}
+.dashboard .main-section .section .middle-box .sqlBackup .db-details a {
+    line-height: 18px;
+    font-weight: 600;
+    color: #656873;
+    display: block;
+}
+.dashboard .main-section .section .middle-box .sqlBackup .db-details span {
+    line-height: 22px;
+    font-size: 12px;
+    color: #777a84;
+}
+.dashboard .main-section .section .middle-box .sqlBackup .btn-row {
+    padding: 5px;
+    padding-left: 20px;
+    text-align: left;
+    font-size: 0;
+}
+.dashboard .main-section .section .middle-box .sqlBackup .btn-row .btn {
+    width: 98px;
+    margin-right: 8px;
+    font-size: 11px;
+}
+.dashboard .main-section .section .middle-box .sqlBackup.success {
+    background: url("../i/db-success.png") no-repeat 10px 10px;
+}
+.dashboard .main-section .section .middle-box .sqlBackup.failed {
+    background: url("../i/db-error.png") no-repeat 10px 10px;
+}
+.dashboard .main-section .section .middle-box .sqlBackup.inline {
+    height: 82px;
+    background-size: 60px auto;
+    background-position: 32px 16px;
+}
+.dashboard .main-section .section .middle-box .sqlBackup.inline .db-details {
+    display: inline-block;
+    border-bottom: none;
+    padding-top: 21px;
+    padding-left: 10px;
+}
+.dashboard .main-section .section .middle-box .sqlBackup.inline .btn-row {
+    float: right;
+    padding: 22px 15px;
+}
+.dashboard .main-section .section .middle-box .tabs-column.sql-server ul li {
+    float: left;
+    margin-left: 30px;
+}
+.dashboard .main-section .section .middle-box .tabs-column.sql-server ul li a {
+    color: #afc1cd;
+}
+.dashboard .main-section .section .middle-box .tabs-column.sql-server ul li.ui-tabs-active a,
+.dashboard .main-section .section .middle-box .tabs-column.sql-server ul li:hover a {
+    color: #3e4c62;
+}
+.dashboard .main-section .section .middle-box #connection-chart,
+.dashboard .main-section .section .middle-box #lock-wait-chart {
+    height: 300px;
+    padding-top: 10px;
+}
+.dashboard .main-section .section .middle-box #communication-server-error-chart {
+    height: 232px;
+}
+.dashboard .main-section .section .middle-box #server-load-chart {
+    height: 233px;
+}
+.dashboard .main-section .section .middle-box #east-server-throughput-chart {
+    height: 241px;
+}
+/*
+.dashboard .main-section .section .middle-box .chart-legend {
+    padding-left: 45px;
+    height: 19%;
+    border-top: 1px solid #bfd0d8;
+    width: 100%;
+    }
+.dashboard .main-section .section .middle-box .chart-legend div {
+    padding-left: 32px;
+    position: relative;
+    padding-top: 5px;
+    float: left;
+    padding-right: 10px;
+    width: 50%;
+    }
+.dashboard .main-section .section .middle-box .chart-legend div .name {
+    font-size: 11px;
+    font-weight: bold;
+    color: #6f7d95;
+    display: block;
+    line-height: 18px; }
+.dashboard .main-section .section .middle-box .chart-legend div .text {
+    font-size: 9px;
+    color: #6f7d95;
+    display: block; }
+.dashboard .main-section .section .middle-box .chart-legend div .count {
+    font-size: 12px;
+    color: #6f7d95;
+    display: block;
+    line-height: 30px; }
+.dashboard .main-section .section .middle-box .chart-legend div .count strong {
+    font-weight: bold; }
+.dashboard .main-section .section .middle-box .chart-legend #chart-legend1:before {
+    content: " ";
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    border-radius: 2px;
+    background: #8672B9;
+    left: 12px;
+    top: 8px; }
+.dashboard .main-section .section .middle-box .chart-legend #chart-legend2:before {
+    content: " ";
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    border-radius: 2px;
+    background: #6F7D95;
+    left: 12px;
+    top: 8px; }
+*/
+
+.dashboard .main-section .section .middle-box #performance-chart-bar svg .nvd3 .nv-axis line,
+.dashboard .main-section .section .middle-box #headquarters-chart svg .nvd3 .nv-axis line,
+.dashboard .main-section .section .middle-box #secure-printing-chart svg .nvd3 .nv-axis line,
+.dashboard .main-section .section .middle-box #lincolnton-chart svg .nvd3 .nv-axis line,
+.dashboard .main-section .section .middle-box #carriers-chart svg .nvd3 .nv-axis line,
+.dashboard .main-section .section .middle-box #error-log-chart svg .nvd3 .nv-axis line,
+.dashboard .main-section .section .middle-box #data-log-chart svg .nvd3 .nv-axis line,
+.dashboard .main-section .section .middle-box #database-size-chart svg .nvd3 .nv-axis line,
+.dashboard .main-section .section .middle-box #server-load-chart svg .nvd3 .nv-axis line,
+.dashboard .main-section .section .middle-box #communication-server-error-chart svg .nvd3 .nv-axis line,
+.dashboard .main-section .section .middle-box #east-server-throughput-chart svg .nvd3 .nv-axis line,
+.dashboard .main-section .section .middle-box #connection-chart svg .nvd3 .nv-axis line,
+.dashboard .main-section .section .middle-box #lock-wait-chart svg .nvd3 .nv-axis line {
+    stroke: transparent;
+}
+.dashboard .main-section .section .middle-box .heading-comm-server {
+    text-align: center;
+    font-weight: bolder;
+    font-size: 18px;
+}
+.dashboard .main-section .section .margin-bottom {
+    margin-bottom: 27px;
+    margin-top: 0px;
+}
+.dashboard .main-section .section .margin-top {
+    margin-top: 27px;
+}
+.dashboard .main-section .section .btn-row {
+    padding: 5px;
+    padding-left: 20px;
+    text-align: left;
+    font-size: 0;
+    display: inline-block
+}
+.dashboard .main-section .section .btn-row .btn {
+    width: 98px;
+    margin-right: 8px;
+    font-size: 11px;
+}
+/*
+.dashboard .main-section .section .sqlBackup.success {
+    background: url("../i/db-success.png") no-repeat 10px 10px; }
+.dashboard .main-section .section .sqlBackup.failed {
+    background: url("../i/db-error.png") no-repeat 10px 10px; }
+.dashboard .main-section .section .sqlBackup.inline {
+    height: 82px;
+    background-size: 60px auto;
+    background-position: 32px 16px; }
+.dashboard .main-section .section .sqlBackup.inline .db-details {
+    display: inline-block;
+    border-bottom: none;
+    padding-top: 21px;
+    padding-left: 10px; }
+*/
+
+.dashboard .main-section .section .btn-row {
+    float: right;
+    padding: 22px 15px;
+}
+.dashboard .main-section .section .middle-box .alarm-chart .nvtooltip {
+    top: 35px !important;
+    margin-left: 0;
+}
+/*tool tip */
+
+#badge-chart .nvtooltip,
+#badge-chart1 .nvtooltip {
+    display: block;
+    background: #d4e3f0;
+    width: 36px;
+    height: 36px;
+    border-radius: 18px;
+    text-align: center;
+    line-height: 32px;
+    font-size: 11px;
+    color: #ffffff;
+    font-weight: 700;
+    border: none;
+}
+/*
+#badge-chart .nvtooltip .tooltp,
+#badge-chart1 .nvtooltip .tooltp {
+    padding-top: 5px;
+    font-size: 16px;
+    line-height: 16px;
+    display: block;
+    font-weight: normal;
+    position: static;
+}
+*/
+#badge-chart .nvtooltip .tooltptrenddown,
+#badge-chart .nvtooltip .tooltptrendup,
+#badge-chart1 .nvtooltip .tooltptrenddown,
+#badge-chart1 .nvtooltip .tooltptrendup {
+    font-size: 9px;
+    line-height: 10px;
+    display: block;
+    color: #6D6E70;
+    position: absolute;
+}
+/* date picker styles */
+
+.ui-datepicker {
+    font-size: 14px;
+    width: 277px;
+    height: 241px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    border-radius: 0px;
+    border: 1px solid #DCDBDC;
+}
+.ui-datepicker-calendar {
+    height: 210px;
+    font-size: 14px;
+}
+.ui-datepicker,
+.ui-datepicker .ui-widget-header {
+    background: #05BBD3;
+    border: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+}
+.ui-datepicker .ui-state-default,
+.ui-datepicker .ui-widget-content .ui-state-default,
+.ui-datepicker.ui-widget-header .ui-state-default {
+    background: transparent;
+    border: 0;
+    color: #ffffff;
+}
+.ui-datepicker .ui-state-default {
+    /*
+    text-align: center;
+    height: 26px;
+    line-height: 24px;
+    width: 26px;
+*/
+    
+    width: 20px;
+    height: 20px;
+    line-height: 15px;
+}
+.ui-datepicker .ui-state-default.ui-state-active {
+    /*
+  background: transparent;
+  border: 0;
+  color: #1c94c4;
+    background-color: #ffffff;
+*/
+    
+    border-radius: 20px;
+    width: 20px;
+    height: 20px;
+    color: #007180;
+    background: none repeat scroll 0% 0% #FFF;
+    border: 1px solid #FFFFFE;
+    line-height: 15px;
+    border-radius: 15px;
+}
+.ui-datepicker th,
+.ui-datepicker .ui-state-default {
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+}
+.ui-datepicker th span {
+    color: #ffffff;
+}
+.ui-datepicker .ui-datepicker-header .ui-datepicker-prev span {
+    background: url("../i/sprite.png") no-repeat scroll 0% 0% transparent;
+    background-position: -116px -29px;
+}
+.ui-datepicker .ui-datepicker-header .ui-datepicker-prev-hover {
+    border: none;
+    top: 2px;
+    left: 2px;
+}
+.ui-datepicker .ui-datepicker-header .ui-datepicker-next span {
+    background: url("../i/sprite.png") no-repeat scroll 0% 0% transparent;
+    background-position: -134px -29px;
+}
+.ui-datepicker .ui-datepicker-header .ui-datepicker-next-hover {
+    border: none;
+    top: 2px;
+    right: 2px;
+}
+/*
+.ui-datepicker .ui-state-default.ui-state-active {
+    border: 0;
+    background: #fff;
+    color: #1c94c4;
+    border-radius: 26px;
+    width: 17px;
+    float: right;
+}
+.ui-datepicker .ui-datepicker-prev span,
+.ui-datepicker .ui-datepicker-next span {
+    width: 8px;
+    height: 13px;
+    background: url("../i/sprite.png") no-repeat;
+}
+.ui-datepicker .ui-datepicker-prev span {
+    background-position: -123px -33px;
+}
+
+.ui-datepicker .ui-datepicker-next span {
+    background-position: -137px -33px;
+}
+*/
+
+.ui-datepicker .ui-state-hover,
+.ui-datepicker .ui-widget-content .ui-state-hover,
+.ui-datepicker .ui-widget-header .ui-state-hover,
+.ui-state-focus,
+.ui-datepicker .ui-widget-content .ui-state-focus,
+.ui-datepicker .ui-widget-header .ui-state-focus {
+    border: none;
+    background-color: transparent;
+}
+.nvtooltip {
+    /*background-color: #bdccd4;*/
+}
+#performance-chart .nvtooltip,
+#headquarters-chart .nvtooltip,
+#carriers-chart .nvtooltip,
+#lincolnton-chart .nvtooltip,
+#secure-printing-chart .nvtooltip,
+#alarm-chart .nvtooltip,
+#alarm-chart-status .nvtooltip,
+#alarm-chart-type .nvtooltip,
+#data-log-chart .nvtooltip,
+#database-size-chart .nvtooltip {
+    font-size: 11px;
+}
+/* upgrade modal window */
+
+#upgrade-modal {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    display: none;
+    background-image: url(../i/upgrade-infographic.png);
+    height: 1736px;
+    width: 980px;
+}
+#upgrade-modal .close-icon {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    background: url(../i/ui-icons_222222_256x240.png) no-repeat -32px -193px;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+.tabs-column .ui-widget-header {
+    border: none;
+    background: none repeat scroll 0% 0% #ffffff;
+    border-radius: 0px;
+}
+.tabs-column .ui-state-active,
+.tabs-column .ui-state-default {
+    border: none;
+    background: none
+}
+.tabs-column .ui-tabs-panel {
+    padding: 0px 7px;
+    background: none repeat scroll 0% 0% #ffffff;
+}
+.tabs-column.ui-widget-content {
+    border: 1px solid #ffffff;
+    background: none repeat scroll 0% 0% #ffffff;
+}
+.tabs-column .tabs-3 #lock-wait-chart svg,
+.tabs-column {
+    display: block;
+    border-radius: 0 0 3px 3px;
+    padding: 0;
+    background: transparent;
+    border: none;
+}
+.tabs-column ul {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    background: #e9f1f6;
+    padding: 0;
+    border: none;
+    text-align: center;
+    font-size: 0;
+}
+.tabs-column ul li {
+    height: 40px;
+    border: none;
+    display: inline-block;
+    float: none;
+    margin: 0;
+    font-size: 11px;
+    background: transparent;
+    padding: 0 15px;
+}
+.tabs-column ul li a {
+    padding: 0 5px;
+    color: #3e4c62;
+    font-weight: 700;
+    height: 40px;
+}
+.tabs-column ul li.ui-tabs-active a {
+    border-bottom: 2px solid #688497;
+}
+.dashboard .main-section .section table tr td.trend-holder {
+    width: 90px;
+    font-weight: 700;
+    font-size: 11px;
+}
+.dashboard .main-section .section table tr td.trend-holder .trend {
+    margin-left: 15px;
+    position: relative;
+    display: inline-block;
+    height: 24px;
+    line-height: 24px;
+}
+.dashboard .main-section .section table tr td.trend-holder .trend:before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 3px;
+}
+.dashboard .main-section .section table tr td.trend-holder.up .trend {
+    background: none repeat scroll 0 0 #a9a4d0;
+    border-radius: 15px;
+    color: #fff;
+    padding: 0 3px 0 5px;
+}
+
+.dashboard .main-section .section table tr td.trend-holder.down .trend {
+    background: none repeat scroll 0 0 #3da1ca;
+    border-radius: 15px;
+    color: #fff;
+    padding: 0 3px 0 10px;
+}
+.dashboard .main-section .section table tr td.trend-holder.down .trend:before {
+    content: "-";
+}
+.dashboard .main-section .section table tr td.trend-holder.warn .trend {
+    background: none repeat scroll 0 0 #3da1ca;
+    border-radius: 15px;
+    color: #fff;
+    padding: 0 3px 0 10px;
+}
+
+.round{
+    background: none repeat scroll 0 0 #3da1ca;
+    border-radius: 15px;
+    color: #fff;
+    padding: 1px 3px 1px 6px
+}
+
+.dashboard .main-section .section table tr td.slider-holder {
+    width: 250px;
+}
+.dashboard .main-section .section table tr td.slider-holder .ui-slider {
+    background: url("../i/kpi-slider-bg-gyr.png") no-repeat;
+    background-position: 100px;
+    background-size: 321px 39px;
+    width: 400px;
+    height: 7px;
+    border: none;
+}
+.dashboard .main-section .section table tr td.slider-holder .ui-slider .ui-slider-range {
+    background: #6B77F3
+    /*#606a70*/
+    
+    ;
+    border-radius: 4px 0 0 4px;
+}
+.dashboard .main-section .section table tr td.slider-holder .ui-slider .ui-slider-handle {
+    width: 3px;
+    height: 15px;
+    margin-left: -1px;
+    top: -4px;
+    border: none;
+    background: #6B77F3
+    /*#606a70*/
+    
+    ;
+}
+.dashboard .main-section .section table tr td.slider-holder .ui-slider.ui-slider-disabled {
+    opacity: 1;
+}
+.dashboard .main-section .section .abnormal-hardware-counts {
+    text-align: center;
+    font-size: 0;
+    height: 100px;
+}
+.dashboard .main-section .section .abnormal-hardware-counts a.reader,
+.dashboard .main-section .section .abnormal-hardware-counts a.input,
+.dashboard .main-section .section .abnormal-hardware-counts a.output {
+    background: url("../i/hardware-condition-ison.png") no-repeat;
+    background-size: 70px 500px;
+}
+.dashboard .main-section .section .abnormal-hardware-counts a.access-panel {
+    background: url("../i/acess-control.png") no-repeat;
+    background-size: 46px 45px;
+}
+.dashboard .main-section .section .abnormal-hardware-counts a {
+    display: inline-block;
+    top: 0px;
+    /*width: 200px;*/
+    
+    width: 30%;
+    height: 100px;
+    /*padding-top: 90px;*/
+    
+    line-height: 1px;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #6f7d95;
+    position: relative;
+    left: 0px;
+    z-index: 1;
+}
+.dashboard .main-section .section .abnormal-hardware-counts a span {
+    display: inline-block;
+    top: 0px;
+    width: 45%;
+    height: 100px;
+    padding-top: 90px;
+    line-height: 1px;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #6F7D95;
+    position: relative;
+    z-index: 1;
+    left: 13px;
+}
+.dashboard .main-section .section .abnormal-hardware-counts a i {
+    width: 22px;
+    height: 22px;
+    background: -webkit-linear-gradient(red, #ce090e, #ae0000);
+    /* For Safari 5.1 to 6.0 */
+    
+    background: -o-linear-gradient(red, #ce090e, #ae0000);
+    /* For Opera 11.1 to 12.0 */
+    
+    background: -moz-linear-gradient(red, #ce090e, #ae0000);
+    /* For Firefox 3.6 to 15 */
+    
+    background: linear-gradient(red, #ce090e, #ae0000);
+    border: 3px solid white;
+    text-align: center;
+    line-height: 16px;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 15px;
+    box-shadow: 0px 0px 2px grey;
+    position: relative;
+    top: -59px;
+    display: inline-block;
+    left: 10px;
+}
+.dashboard .main-section .section .abnormal-hardware-counts a .tool-tip {
+    position: absolute;
+    top: 100px;
+    width: 300px;
+    left: -47px;
+    background: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    display: none;
+    z-index: 101;
+}
+.dashboard .main-section .section .abnormal-hardware-counts a .tool-tip .arrow {
+    position: absolute;
+    background: url("../i/tool-tip-arrow.png") no-repeat;
+    width: 18px;
+    height: 10px;
+    left: 100px;
+    top: -8px;
+}
+.dashboard .main-section .section .abnormal-hardware-counts a .tool-tip header {
+    font-size: 11px;
+    font-weight: 700;
+    color: #818ea3;
+    height: 39px;
+    line-height: 38px;
+    border-bottom: 1px solid #b7c1cd;
+    background: #ffffff;
+    padding: 0 0 0 13px;
+    text-align: left;
+    border-radius: 3px 3px 0 0;
+}
+.dashboard .main-section .section .abnormal-hardware-counts a .tool-tip ul {
+    display: block;
+    border-radius: 0 0 3px 3px;
+    overflow: hidden;
+}
+.dashboard .main-section .section .abnormal-hardware-counts a .tool-tip ul li {
+    display: block;
+    height: 35px;
+    line-height: 35px;
+    padding: 0 10px;
+    text-align: left;
+    font-size: 12px;
+    color: #727b8b;
+    text-transform: none;
+}
+.dashboard .main-section .section .abnormal-hardware-counts a .tool-tip ul li span {
+    float: right;
+    color: #e75f59;
+}
+.dashboard .main-section .section .abnormal-hardware-counts a .tool-tip ul li:nth-child(odd) {
+    background: #f4f7fa;
+}
+.dashboard .main-section .section .abnormal-hardware-counts a:hover .tool-tip {
+    display: block;
+}
+/*
+.dashboard .main-section .section .abnormal-hardware-counts a:hover {
+    background-color: #e5eaee; }
+*/
+
+.dashboard .main-section .section .abnormal-hardware-counts a.access-panel {
+    background-position: 50% 30px;
+}
+.dashboard .main-section .section .abnormal-hardware-counts a.reader {
+    background-position: 50% -4px;
+    background-size: 54px !important;
+}
+.dashboard .main-section .section .abnormal-hardware-counts a.input {
+    background-position: 50% -125px;
+    background-size: 54px !important;
+}
+.dashboard .main-section .section .abnormal-hardware-counts a.output {
+    background-position: 50% -245px;
+    background-size: 54px !important;
+}
+.dashboard .main-section .section .hardware-counts {
+    text-align: center;
+    font-size: 0;
+    height: 100px;
+}
+.dashboard .main-section .section .hardware-counts a.reader,
+.dashboard .main-section .section .hardware-counts a.input,
+.dashboard .main-section .section .hardware-counts a.output {
+    background: url("../i/hardware-condition-ison.png") no-repeat;
+    background-size: 70px 500px;
+    background-size: 54px !important;
+}
+.dashboard .main-section .section .hardware-counts a.access-panel {
+    background: url("../i/acess-control.png") no-repeat;
+    background-size: 35px 31px;
+    background-position: 50% !important;
+}
+.dashboard .main-section .section .hardware-counts a {
+    display: inline-block;
+    top: 0px;
+    /*width: 200px;*/
+    
+    width: 25%;
+    height: 100px;
+    /*padding-top: 90px;*/
+    
+    line-height: 1px;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #6f7d95;
+    position: relative;
+    left: 0px;
+    z-index: 1;
+}
+.dashboard .main-section .section .hardware-counts a span {
+    display: inline-block;
+    top: 0px;
+    width: 79%;
+    height: 100px;
+    padding-top: 90px;
+    line-height: 1px;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #6F7D95;
+    position: relative;
+    z-index: 1;
+}
+.dashboard .main-section .section .hardware-counts a i {
+    width: 35px;
+    height: 25px;
+    background: -webkit-linear-gradient(red, #ce090e, #ae0000);
+    /* For Safari 5.1 to 6.0 */
+    
+    background: -o-linear-gradient(red, #ce090e, #ae0000);
+    /* For Opera 11.1 to 12.0 */
+    
+    background: -moz-linear-gradient(red, #ce090e, #ae0000);
+    /* For Firefox 3.6 to 15 */
+    
+    background: linear-gradient(red, #ce090e, #ae0000);
+    border: 3px solid white;
+    text-align: center;
+    line-height: 20px;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 10px;
+    box-shadow: 0px 0px 2px grey;
+    position: relative;
+    top: -87px;
+    margin-left: 61px;
+    display: inline-block;
+}
+.dashboard .main-section .section .hardware-counts a .tool-tip {
+    position: absolute;
+    top: 100px;
+    width: 300px;
+    left: -47px;
+    background: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    display: none;
+    z-index: 101;
+}
+.dashboard .main-section .section .hardware-counts a .tool-tip .arrow {
+    position: absolute;
+    background: url("../i/tool-tip-arrow.png") no-repeat;
+    width: 18px;
+    height: 10px;
+    left: 100px;
+    top: -8px;
+}
+.dashboard .main-section .section .hardware-counts a .tool-tip header {
+    font-size: 11px;
+    font-weight: 700;
+    color: #818ea3;
+    height: 39px;
+    line-height: 38px;
+    border-bottom: 1px solid #b7c1cd;
+    background: #ffffff;
+    padding: 0 0 0 13px;
+    text-align: left;
+    border-radius: 3px 3px 0 0;
+}
+.dashboard .main-section .section .hardware-counts a .tool-tip ul {
+    display: block;
+    border-radius: 0 0 3px 3px;
+    overflow: hidden;
+}
+.dashboard .main-section .section .hardware-counts a .tool-tip ul li {
+    display: block;
+    height: 35px;
+    line-height: 35px;
+    padding: 0 10px;
+    text-align: left;
+    font-size: 12px;
+    color: #727b8b;
+    text-transform: none;
+}
+.dashboard .main-section .section .hardware-counts a .tool-tip ul li span {
+    float: right;
+    color: #e75f59;
+}
+.dashboard .main-section .section .hardware-counts a .tool-tip ul li:nth-child(odd) {
+    background: #f4f7fa;
+}
+.dashboard .main-section .section .hardware-counts a:hover .tool-tip {
+    display: block;
+}
+/*
+.dashboard .main-section .section .hardware-counts a:hover {
+    background-color: #e5eaee; }
+*/
+
+.dashboard .main-section .section .abnormal-hardware-counts a.access-panel {
+    background-position: 50% 30px;
+}
+.dashboard .main-section .section .hardware-counts a.reader {
+    background-position: 50% -5px;
+}
+.dashboard .main-section .section .hardware-counts a.input {
+    background-position: 50% -125px;
+}
+.dashboard .main-section .section .hardware-counts a.output {
+    background-position: 50% -244px;
+}
+.dashboard .main-section .section .response-time {
+    display: block;
+    height: 32px;
+    padding: 0px 20px;
+    float: right;
+}
+.dashboard .main-section .section .response-time span {
+    display: inline-block;
+    width: 120px;
+    height: 35px;
+    text-align: center;
+    /*float: right;*/
+    
+    border-radius: 4px;
+    top: 10px;
+    line-height: 35px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 12px;
+    background: #59BAE7;
+    color: #FFF;
+    font-family: "Open Sans", sans-serif;
+    cursor: pointer;
+}
+.dashboard .main-section .section .response-time span:hover {
+    background: #4da2c9;
+}
+.btn.mini-btn {
+    height: 22px;
+    line-height: 22px;
+}
+.btn.mini-btn i {
+    width: 22px;
+    height: 22px;
+    background: url("../i/mini-btn-icons.png") no-repeat;
+    display: inline-block;
+}
+.btn.mini-btn i.add {
+    background-position: 0 0;
+}
+.input-cnt.datepicker {
+    overflow: hidden;
+ }
+.input-cnt.datepicker input,
+.input-cnt-config.datepicker input {
+    background: #92D3E1;
+    border: none;
+    color: #fff !important;
+    width: 135px;
+}
+.input-cnt-config.datepicker {
+    float: left;
+    margin-right: 5px;
+}
+.date-range .sep {
+    float: left;
+    margin-right: 5px;
+}
+.new-badge-modal {
+    width: 620px;
+    position: absolute;
+    top: 122px;
+    height: 400px;
+    background: #fff;
+    z-index: 1001;
+    left: 50%;
+    margin-left: -300px;
+    border-radius: 0px;
+    overflow: hidden;
+    display: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.26);
+}
+.new-badge-modal header {
+    height: 50px;
+    padding-left: 16px;
+    background: white;
+    line-height: 50px;
+    font-size: 13px;
+    color: black;
+    border-radius: 3px 3px 0 0;
+    border-bottom: 1px solid #DCDBDC;
+}
+.new-badge-modal .date-range {
+    margin-left: 35px;
+    float: left;
+}
+#archive-chart {
+    display: block;
+    height: 300px;
+    width: 600px;
+    margin-top: 50px;
+}
+.archive-modal {
+    width: 620px;
+    position: absolute;
+    top: 122px;
+    height: 350px;
+    background: #fff;
+    z-index: 1001;
+    left: 50%;
+    margin-left: -300px;
+    border-radius: 0px;
+    overflow: hidden;
+    display: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.26);
+}
+.archive-modal header {
+    height: 50px;
+    padding-left: 16px;
+    background: white;
+    line-height: 50px;
+    font-size: 13px;
+    color: black;
+    border-radius: 3px 3px 0 0;
+    border-bottom: 1px solid #DCDBDC;
+}
+#badge-chart {
+    display: block;
+    height: 300px;
+    width: 600px;
+}
+.settings-modal {
+    width: 980px;
+    position: absolute;
+    top: 122px;
+    height: 680px;
+    background: #fff;
+    z-index: 1001;
+    left: 50%;
+    margin-left: -490px;
+    border-radius: 0px;
+    overflow: hidden;
+    display: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.26);
+}
+.settings-modal header {
+    height: 50px;
+    padding-left: 46px;
+    background: white url("../i/header-top-icons.png") no-repeat -3px -110px;
+    line-height: 50px;
+    font-size: 16px;
+    color: black;
+    border-radius: 3px 3px 0 0;
+    border-bottom: 1px solid #DCDBDC;
+}
+.archive-modal a.close-archive-modal,
+.new-badge-modal a.close-badge-modal,
+.settings-modal header a.close-modal {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    background: url("../i/close.png") no-repeat;
+    background-position: 20px !important;
+}
+.archive-modal a.close-archive-modal:hover,
+.new-badge-modal a.close-badge-modal:hover,
+.settings-modal header a.close-modal:hover {
+    opacity: 0.5;
+}
+.settings-modal .config-tabs {
+    position: absolute;
+    top: 50px;
+    bottom: 69px;
+    width: 100%;
+    padding: 0;
+    border: none;
+    background: white;
+    border-radius: 0;
+}
+.settings-modal .config-tabs ul {
+    display: block;
+    height: 47px;
+    line-height: 47px;
+    background: white;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+}
+.settings-modal .config-tabs ul li.ui-state-default {
+    display: inline-block;
+    float: left;
+    height: 47px;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+}
+.settings-modal .config-tabs ul li.ui-state-default a {
+    display: block;
+    padding: 0 18px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #bedfee;
+}
+.settings-modal .config-tabs ul li.ui-tabs-active,
+.settings-modal .config-tabs ul li:hover {
+    background: white;
+}
+.settings-modal .config-tabs ul li.ui-tabs-active a,
+.settings-modal .config-tabs ul li:hover a {
+    color: black;
+}
+.settings-modal .config-tabs .ui-tabs-panel {
+    padding: 0;
+    background: transparent;
+    max-height: 569px;
+    min-height: 300px;
+}
+.settings-modal .config-tabs .ui-tabs-panel .accordion {
+    display: block;
+}
+.settings-modal .config-tabs .ui-tabs-panel .accordion .ui-icon {
+    display: none;
+}
+.settings-modal .config-tabs .ui-tabs-panel .accordion .ui-accordion-header a {
+    padding-left: 0;
+}
+.settings-modal .config-tabs .ui-tabs-panel .accordion h3 {
+    display: block;
+    height: 46px;
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+    background: white;
+    line-height: 27px;
+    font-size: 15px;
+    color: #3e4c62;
+    font-weight: 600;
+    padding: 9px 15px 12px 16px;
+    outline: none;
+}
+.settings-modal .config-tabs .ui-tabs-panel .accordion h4 {
+    display: block;
+    height: 46px;
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+    background: #e9f1f6;
+    line-height: 27px;
+    font-size: 14px;
+    color: #3e4c62;
+    font-weight: 600;
+    padding: 9px 15px 8px;
+    outline: none;
+}
+.settings-modal .config-tabs .ui-tabs-panel .accordion h3 i.arrow {
+    background: url("../i/accordian-arrw.png") no-repeat 0 -8px;
+    width: 13px;
+    height: 8px;
+    display: inline-block;
+    margin-left: 10px;
+}
+.settings-modal .config-tabs .ui-tabs-panel .accordion h3 a.btn {
+    height: 28px;
+    padding: 3px;
+    border-bottom: 2px solid #279acf;
+    float: right;
+    margin-left: 7px;
+}
+.settings-modal .config-tabs .ui-tabs-panel .accordion tr td a.btn {
+    height: 28px;
+    border-bottom: 2px solid #279acf;
+    float: left;
+    margin-left: 10px;
+    margin-top: 7px;
+    width: auto;
+    padding: 3px 5px;
+    color: #fff;
+    font-size: 11px;
+}
+.settings-modal .config-tabs .date-range {
+    padding: 0 0 4px 0;
+    overflow: hidden;
+}
+.settings-modal .config-tabs .ui-tabs-panel .accordion h3 a.btn i.add {
+    background-position: 0 -66px;
+}
+.settings-modal .config-tabs .ui-tabs-panel .accordion h3 a.btn.edit,
+.settings-modal .config-tabs .ui-tabs-panel .accordion h3 a.btn.save {
+    width: 60px;
+    color: #fff;
+    font-size: 13px;
+    line-height: 21px;
+}
+.settings-modal .config-tabs .ui-tabs-panel .accordion h3 a.btn.save {
+    display: none;
+}
+.settings-modal .config-tabs .ui-tabs-panel .accordion h3.ui-state-active i.arrow {
+    background-position: 0 0;
+}
+.settings-modal .config-tabs .ui-tabs-panel .accordion .ui-accordion-content {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+    padding: 0;
+    overflow: visible;
+}
+.settings-modal .config-tabs .ui-tabs-panel .accordion .ui-accordion-content table {
+    width: 100%;
+}
+.settings-modal .config-tabs .ui-tabs-panel .accordion .ui-accordion-content table tr td {
+    height: 42px;
+    line-height: 42px;
+    background: white;
+    vertical-align: middle;
+}
+.settings-modal .config-tabs .ui-tabs-panel .accordion .ui-accordion-content table tr td.close {
+    min-width: 30px;
+}
+.settings-modal .config-tabs .ui-tabs-panel .accordion .ui-accordion-content table tr td.label {
+    width: 275px;
+}
+.settings-modal .config-tabs .ui-tabs-panel .accordion .ui-accordion-content table tr td.label .label_check {
+    width: 27px;
+    height: 16px;
+    position: relative;
+    top: 3px;
+    display: none;
+}
+.settings-modal .config-tabs .ui-tabs-panel .accordion .ui-accordion-content table tr td.label div {
+    padding-left: 25px;
+    font-size: 13px;
+    color: #656873;
+}
+.settings-modal .config-tabs .ui-tabs-panel .accordion .ui-accordion-content table tr td.label div span {
+    font-weight: 600;
+    color: #000;
+}
+.settings-modal .config-tabs .ui-tabs-panel .accordion .ui-accordion-content table tr td.slider {
+    width: 655px;
+}
+.settings-modal .config-tabs .ui-tabs-panel .accordion .ui-accordion-content table tr td.slider .range-slider {
+    height: 5px;
+    border: none;
+    background: #38cd90;
+}
+.settings-modal .config-tabs .ui-tabs-panel .accordion .ui-accordion-content table tr td.slider .range-slider .ui-slider-range {
+    background: #ffa800;
+}
+.settings-modal .config-tabs .ui-tabs-panel .accordion .ui-accordion-content table tr td.slider .range-slider .color-add {
+    float: right;
+    height: 100%;
+    background: #e75f59;
+    border-radius: 0 3px 3px;
+}
+.settings-modal .config-tabs .ui-tabs-panel .accordion .ui-accordion-content table tr td.slider .range-slider .ui-slider-handle {
+    width: 17px;
+    height: 21px;
+    background: url("../i/range-slider-handle.png") no-repeat;
+    border: none;
+    border-radius: 0;
+    top: -8px;
+    margin-left: -8px;
+    cursor: pointer;
+}
+.settings-modal .config-tabs .ui-tabs-panel .accordion .ui-accordion-content table tr td.slider .range-slider .ui-slider-handle .tooltip {
+    background: url("../i/tool-tip-bg.png") no-repeat;
+    width: 51px;
+    height: 23px;
+    line-height: 19px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    text-align: center;
+}
+.settings-modal .config-tabs .ui-tabs-panel .accordion .ui-accordion-content table tr td.slider .range-slider.ui-state-disabled {
+    opacity: 1;
+}
+.settings-modal .config-tabs .ui-tabs-panel .accordion .ui-accordion-content table tr td.close a {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: url("../i/close.png") no-repeat 50% 50%;
+}
+.settings-modal #ui-id-13 td.close a {
+    display: none;
+}
+.settings-modal .config-tabs .ui-tabs-panel .accordion .ui-accordion-content table tr.alt td {
+    background: #e1ebf1;
+}
+.settings-modal footer {
+    border-top: 1px solid #cad5dc;
+    background: #ecf2f6;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    padding: 15px 18px;
+    line-height: 38px;
+}
+.settings-modal footer a.btn {
+    float: right;
+    width: 80px;
+    border-bottom: 2px solid #4da2c9;
+}
+.settings-modal footer span {
+    font-size: 13px;
+    color: #889095;
+    padding-left: 27px;
+    display: inline-block;
+    position: relative;
+    padding-right: 15px;
+}
+.settings-modal footer span:after {
+    position: absolute;
+    width: 20px;
+    height: 5px;
+    left: 0;
+    top: 17px;
+    border-radius: 3px;
+    display: inline-block;
+    content: " ";
+}
+.settings-modal footer span.normal:after {
+    background: #38cd90;
+}
+.settings-modal footer span.warning:after {
+    background: #ffa800;
+}
+.settings-modal footer span.error:after {
+    background: #e75f59;
+}
+/* table list odd even */
+
+.settings-modal table tr:nth-child(2n+3) td {
+    background: none repeat scroll 0% 0% #E1EBF1;
+}
+.settings-modal .config-tabs .ui-tabs-panel .accordion .ui-accordion-content table tr:nth-child(2n+0) td {
+    background: white;
+}
+.modal-overlay,
+.new-badge-modal-overlay,
+.archive-modal-overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    /*background: rgba(0, 0, 0, 0.7);*/
+    
+    background: rgba(128, 129, 132, 0.5);
+    z-index: 1000;
+    display: none;
+}
+.add-popup,
+#add-popup,
+#add-pop-guard-log,
+.add-pop-comm-log {
+    color: #656873;
+    font-size: 11px;
+    background: none repeat scroll 0% 0% #fff;
+    display: none;
+}
+.popup-title {
+    height: 24px;
+    padding-left: 8px;
+    border-bottom: 1px solid #bfbfbf;
+}
+.popup-title {
+    font-size: 12px;
+    font-weight: bold;
+}
+.popup-title h2 {
+    display: inline-block;
+    color: #3E4C62;
+}
+.popup-title a {
+    color: #59BAE7;
+    float: right;
+    float: right;
+    margin-right: 10px;
+}
+.add-popup .alert-form-body {
+    padding: 10px;
+}
+.add-popup .alert-form-body div {
+    margin-bottom: 15px;
+}
+.add-popup input[type="text"] {
+    background: none;
+    width: 100%;
+}
+.add-popup a.btn {
+    height: 28px;
+    padding: 3px;
+    border-bottom: 2px solid #279ACF;
+}
+.add-popup .btn.mini-btn i.add {
+    background-position: 0px -66px !important;
+}
+.add-popup .add-alert {
+    vertical-align: top;
+}
+.add-popup .add-alert span {
+    margin-left: 8px;
+    line-height: 27px;
+    vertical-align: top;
+}
+.add-popup .alert_time,
+.alert_time {
+    margin-top: 20px;
+}
+td .alert_time {
+    float: left;
+    margin-top: 0;
+    padding-top: 0;
+}
+.add-popup .label_radio,
+td .label_radio {
+    padding-left: 22px!important;
+    padding-bottom: 4px;
+    margin-right: 8px;
+}
+.add-popup::-webkit-input-placeholder {
+    color: #ccc;
+    font-style: italic;
+}
+.add-popup::-moz-placeholder {
+    color: #ccc;
+    font-style: italic;
+    opacity: .9;
+}
+.alert_time .label_radio {
+    font-size: 11px;
+}
+.add-popup::-ms-input-placeholder {
+    color: #ccc;
+    font-style: italic;
+}
+.dashboard .main-section header a.logout:hover {
+    background-color: #B83426;
+}
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+    .dashboard .main-section .section .mid-right-small .top-box-1 .description p {
+        font-size: 10px;
+    }
+    .dashboard .main-section header .date-range {
+        width: 270px;
+    }
+    header .date-range .input-cnt.datepicker input.date-picker {
+        width: 112px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .dashboard .main-section header a.logout {
+        width: 50px;
+    }
+    .dashboard .main-section header .indicators li a.settings,
+    .dashboard .main-section header .indicators li a.calendar {
+        width: 50px;
+    }
+    .dashboard header ul li a .icon2 {
+        margin: 7px 7px;
+    }
+    .dashboard .main-section header .indicators li a.user {
+        width: 112px;
+    }
+    .dashboard .main-section header .main-logo {
+        width: 93px;
+    }
+    .dashboard .main-section header .logo {
+        margin-left: 13px;
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .dashboard .main-section .section .middle-box .title .date-range {
+        margin-left: 10px;
+    }
+    .dashboard .main-section .section .middle-box .title .legend p {
+        margin-right: 10px;
+    }
+    .system-check .system-check-slider .item .count {
+        font-size: 14px;
+    }
+    .system-check .system-check-slider-2 .item .count {
+        font-size: 14px;
+    }
+    .dashboard .main-section header .indicators li a.calendar {
+        width: 38px;
+        padding: 0px;
+    }
+    .dashboard .main-section header .indicators li a.error {
+        width: 93px;
+        padding: 0px;
+        padding-left: 40px;
+    }
+    .dashboard .main-section header .indicators li a.date-range {
+        width: 93px;
+        padding: 0px;
+        text-align: center;
+    }
+    .dashboard .main-section header .indicators li a.warning {
+        width: 105px;
+        padding: 0px;
+        padding-left: 40px;
+    }
+    .dashboard .main-section header .indicators li a.settings {
+        width: 38px;
+        height: 45px;
+    }
+    .dashboard .main-section header .indicators li a.user {
+        width: 105px;
+        padding: 0px;
+    }
+    .dashboard .main-section header .indicators li a.calendar {
+        height: 46px;
+        padding: 15px 10px;
+    }
+    .dashboard .main-section header .indicators li a.calendar .icon {
+        width: 17px;
+        height: 17px;
+        background-position: -100px 0;
+        display: block;
+    }
+    .dashboard .main-section header .indicators li a.error:before,
+    .dashboard .main-section header .indicators li a.warning:before {
+        display: inline-block;
+        position: absolute;
+        border-radius: 50px;
+        height: 23px;
+        width: 23px;
+        background: #ffffff;
+        text-align: center;
+        padding: 0 5px;
+        color: #fff;
+        font-size: 13px;
+        font-weight: 600;
+        content: attr(data-count);
+        line-height: 23px;
+        top: 13px;
+        min-width: 5px;
+        left: 13px;
+        background: #B83426;
+    }
+    /*
+    .dashboard .main-section header .indicators li a.warning:before{
+        background: #F6921E;
+    }
+*/
+    
+    .dashboard .main-section header .indicators li a.error:before {
+        background: #B83426;
+    }
+    .dashboard .main-section header .indicators li a.error:hover:before {
+        background: #D84235;
+    }
+    .dashboard .main-section header .indicators li a.error:hover,
+    .dashboard .main-section header .indicators li a.warning:hover {
+        background-color: #B83426;
+    }
+    .dashboard .main-section header .indicators li a.settings:hover,
+    .dashboard .main-section header .indicators li a.calendar:hover,
+    .dashboard .main-section header .indicators li a.date-range:hover,
+    .dashboard .main-section header .indicators li a.user:hover {
+        background-color: #B83426;
+    }
+    .dashboard .main-section header .indicators li a.calender {
+        float: right;
+        width: 58px;
+        height: 46px;
+        margin-right: 1px;
+        border-left: 1px solid #d03f31;
+    }
+    .dashboard .main-section header .indicators li a.calendar.active {
+        background-color: #B83426;
+    }
+    .dashboard .main-section header a.calender .icon {
+        width: 15px;
+        height: 17px;
+        background-position: -100px 0;
+        display: block;
+        margin: 14px auto;
+    }
+    .dashboard header ul li a .icon2 {
+        width: 32px;
+        height: 32px;
+        float: left;
+        margin: 7px 1px;
+        background-position: -32px 0;
+    }
+    header .date-range .input-cnt.datepicker input.date-picker {
+        width: 112px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .dashboard .main-section header .date-range {
+        width: 270px;
+    }
+    .dashboard .main-section header a.logout {
+        width: 38px;
+    }
+    .dashboard .main-section header .indicators li a.user {
+        width: 95px;
+    }
+}
+.response-toolTip {
+    position: absolute;
+    width: 520px;
+    height: 220px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    min-height: 50px;
+    top: 200px;
+    left: 256px;
+    background: #fff;
+    border-radius: 3px;
+    display: none;
+}
+.response-toolTip .arrow {
+    background: url("../i/kpi-tooltip-arrow.png") no-repeat;
+    width: 18px;
+    height: 9px;
+    position: absolute;
+    top: -8px;
+    right: 50px;
+}
+.response-toolTip header {
+    height: 30px;
+    border-bottom: 1px solid #dfe3e8;
+    line-height: 33px;
+    padding-left: 12px;
+    font-size: 11px;
+    font-weight: bold;
+    color: #3e4c62;
+    text-transform: uppercase;
+}
+.response-toolTip .content .area-chart {
+    height: 100px;
+    width: 380px;
+    position: relative;
+    overflow: hidden;
+    padding-top: 10px;
+    border-radius: 0 0 3px 3px;
+}
+.response-toolTip .content .speeds table {
+    background: #ECF2F6;
+    height: 90px;
+    width: 380px;
+    position: relative;
+    overflow: hidden;
+    padding-top: 10px;
+    border-radius: 0 0 3px 3px;
+}
+.response-toolTip .content .speeds table tr:nth-child(1) td {
+    height: 50%;
+    width: 33%;
+    font-size: 12px;
+    fill: #3E4C62;
+    font: bold 12px Arial;
+    text-align: center;
+    padding: 15px 10px;
+}
+.response-toolTip .content .speeds table tr:nth-child(2) td {
+    height: 50%;
+    width: 33%;
+    fill: #3E4C62;
+    font: bold 18px Arial;
+    text-align: center;
+    padding: 0px 10px;
+}
+.response-toolTip .content .send-info-yes table {
+    height: 190px;
+    width: 140px;
+    position: absolute;
+    top: 38px;
+    left: 380px;
+    overflow: hidden;
+    padding-top: 10px;
+    border-radius: 0 0 3px 3px;
+}
+.response-toolTip .content .send-info-yes table tr:nth-child(1) td {
+    padding: 10px 10px;
+    padding-top: 50px;
+    height: 50%;
+}
+.response-toolTip .content .send-info-yes table tr:nth-child(1) td p {
+    text-align: center;
+}
+.response-toolTip .content .send-info-yes table tr:nth-child(1) td p span {
+    line-height: 20px;
+    color: #909090;
+    font-size: 14px;
+    font-family: "Open Sans", sans-serif;
+}
+.response-toolTip .content .send-info-yes table tr:nth-child(2) td {
+    padding: 10px 30px;
+    height: 40%;
+}
+.response-toolTip .content .send-info-yes table tr:nth-child(2) td p span {
+    display: inline-block;
+    padding-left: 10px;
+    width: 80px;
+    height: 35px;
+    text-align: center;
+    border-radius: 4px;
+    top: 10px;
+    line-height: 35px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 12px;
+    background: none repeat scroll 0% 0% #59BAE7;
+    color: #FFF;
+    font-family: "Open Sans", sans-serif;
+}
+.response-toolTip .content .send-info-yes table tr:nth-child(2) td p span:hover {
+    background: #4da2c9;
+    cursor: pointer;
+}
+/*.dashboard .main-section .section .middle-box #performance-chart .nvtooltip,*/
+
+.dashboard .main-section .section .middle-box #performance-chart-onguard .nvtooltip,
+.dashboard .main-section .section .middle-box #error-log-chart .nvtooltip,
+.dashboard .main-section .section .middle-box #lock-wait-chart .nvtooltip,
+.dashboard .main-section .section .middle-box #avg-connection-chart .nvtooltip,
+.dashboard .main-section .section .middle-box #data-log-chart .nvtooltip,
+.dashboard .main-section .section .middle-box #connection-chart .nvtooltip,
+.dashboard .main-section .section .middle-box #size-chart .nvtooltip,
+.dashboard .main-section .section .middle-box #server-load-chart .nvtooltip,
+.dashboard .main-section .section .middle-box #communication-server-error-chart .nvtooltip,
+.dashboard .main-section .section .middle-box #database-size-chart .nvtooltip {
+    /*box-shadow: 0 0 5px rgba(0, 0, 0, 0.12);*/
+    
+    border: 1px solid #b4bfcb;
+    /*border-radius: 3px;*/
+    
+    margin-left: -50px;
+    /*background-color: #bdccd4;*/
+}
+/*.dashboard .main-section .section .middle-box #performance-chart .nvtooltip table,*/
+
+.dashboard .main-section .section .middle-box #performance-chart-onguard .nvtooltip table,
+.dashboard .main-section .section .middle-box #error-log-chart .nvtooltip table,
+.dashboard .main-section .section .middle-box #lock-wait-chart .nvtooltip table,
+.dashboard .main-section .section .middle-box #avg-connection-chart .nvtooltip table,
+.dashboard .main-section .section .middle-box #data-log-chart .nvtooltip table,
+.dashboard .main-section .section .middle-box #connection-chart .nvtooltip table,
+.dashboard .main-section .section .middle-box #size-chart .nvtooltip table,
+.dashboard .main-section .section .middle-box #server-load-chart .nvtooltip table,
+.dashboard .main-section .section .middle-box #communication-server-error-chart .nvtooltip table,
+.dashboard .main-section .section .middle-box #database-size-chart .nvtooltip table {
+    margin: 0;
+}
+/*.dashboard .main-section .section .middle-box #performance-chart .nvtooltip table thead td,*/
+
+.dashboard .main-section .section .middle-box #performance-chart-onguard .nvtooltip table thead td,
+.dashboard .main-section .section .middle-box #error-log-chart .nvtooltip table thead td,
+.dashboard .main-section .section .middle-box #lock-wait-chart .nvtooltip table thead td,
+.dashboard .main-section .section .middle-box #avg-connection-chart .nvtooltip table thead td,
+.dashboard .main-section .section .middle-box #data-log-chart .nvtooltip table thead td,
+.dashboard .main-section .section .middle-box #connection-chart .nvtooltip table thead td,
+.dashboard .main-section .section .middle-box #size-chart .nvtooltip table thead td,
+.dashboard .main-section .section .middle-box #server-load-chart .nvtooltip table thead td,
+.dashboard .main-section .section .middle-box #communication-server-error-chart .nvtooltip table thead td,
+.dashboard .main-section .section .middle-box #database-size-chart .nvtooltip table thead td {
+    padding: 0 3px;
+    border-bottom: 1px solid #b4bfcb;
+    height: 16px;
+    /*background-color: #bdccd4;*/
+    
+    font-weight: 100;
+    font-size: 11px;
+}
+/*.dashboard .main-section .section .middle-box #performance-chart .nvtooltip table tbody tr td,*/
+
+.dashboard .main-section .section .middle-box #performance-chart-onguard .nvtooltip table tbody tr td,
+.dashboard .main-section .section .middle-box #error-log-chart .nvtooltip table tbody tr td,
+.dashboard .main-section .section .middle-box #lock-wait-chart .nvtooltip table tbody tr td,
+.dashboard .main-section .section .middle-box #avg-connection-chart .nvtooltip table tbody tr td,
+.dashboard .main-section .section .middle-box #data-log-chart .nvtooltip table tbody tr td,
+.dashboard .main-section .section .middle-box #connection-chart .nvtooltip table tbody tr td,
+.dashboard .main-section .section .middle-box #size-chart .nvtooltip table tbody tr td,
+.dashboard .main-section .section .middle-box #server-load-chart .nvtooltip table tbody tr td,
+.dashboard .main-section .section .middle-box #communication-server-error-chart .nvtooltip table tbody tr td,
+.dashboard .main-section .section .middle-box #database-size-chart .nvtooltip table tbody tr td {
+    height: 14px;
+    /*background-color: #bdccd4;*/
+    
+    padding: 0 2px;
+    border: none;
+    font-size: 11px
+}
+/*.dashboard .main-section .section .middle-box #performance-chart .nvtooltip table tbody tr td.legend-color-guide,*/
+/*
+
+.dashboard .main-section .section .middle-box #performance-chart-onguard .nvtooltip table tbody tr td.legend-color-guide,
+.dashboard .main-section .section .middle-box #error-log-chart .nvtooltip table tbody tr td.legend-color-guide,
+.dashboard .main-section .section .middle-box #lock-wait-chart .nvtooltip table tbody tr td.legend-color-guide,
+.dashboard .main-section .section .middle-box #avg-connection-chart .nvtooltip table tbody tr td.legend-color-guide,
+.dashboard .main-section .section .middle-box #data-log-chart .nvtooltip table tbody tr td.legend-color-guide,
+.dashboard .main-section .section .middle-box #connection-chart .nvtooltip table tbody tr td.legend-color-guide,
+.dashboard .main-section .section .middle-box #size-chart .nvtooltip table tbody tr td.legend-color-guide,
+.dashboard .main-section .section .middle-box #server-load-chart .nvtooltip table tbody tr td.legend-color-guide,
+.dashboard .main-section .section .middle-box #communication-server-error-chart .nvtooltip table tbody tr td.legend-color-guide,
+.dashboard .main-section .section .middle-box #database-size-chart .nvtooltip table tbody tr td.legend-color-guide{
+    width: 11px;
+    padding-left: 12px; }
+*/
+/*.dashboard .main-section .section .middle-box #performance-chart .nvtooltip table tbody tr td.legend-color-guide .legend-color-guide,*/
+/*
+
+.dashboard .main-section .section .middle-box #performance-chart-onguard .nvtooltip table tbody tr td.legend-color-guide .legend-color-guide,
+.dashboard .main-section .section .middle-box #error-log-chart .nvtooltip table tbody tr td.legend-color-guide .legend-color-guide,
+.dashboard .main-section .section .middle-box #lock-wait-chart .nvtooltip table tbody tr td.legend-color-guide .legend-color-guide,
+.dashboard .main-section .section .middle-box #avg-connection-chart .nvtooltip table tbody tr td.legend-color-guide .legend-color-guide,
+.dashboard .main-section .section .middle-box #data-log-chart .nvtooltip table tbody tr td.legend-color-guide .legend-color-guide,
+.dashboard .main-section .section .middle-box #connection-chart .nvtooltip table tbody tr td.legend-color-guide .legend-color-guide,
+.dashboard .main-section .section .middle-box #size-chart .nvtooltip table tbody tr td.legend-color-guide .legend-color-guide,
+.dashboard .main-section .section .middle-box #server-load-chart .nvtooltip table tbody tr td.legend-color-guide .legend-color-guide,
+.dashboard .main-section .section .middle-box #communication-server-error-chart .nvtooltip table tbody tr td.legend-color-guide .legend-color-guide,
+.dashboard .main-section .section .middle-box #database-size-chart .nvtooltip table tbody tr td.legend-color-guide .legend-color-guide{
+    width: 11px;
+    height: 11px;
+    border-radius: 2px; }
+*/
+/*.dashboard .main-section .section .middle-box #performance-chart .nvtooltip table tbody tr td.key,*/
+
+.dashboard .main-section .section .middle-box #performance-chart-onguard .nvtooltip table tbody tr td.key,
+.dashboard .main-section .section .middle-box #error-log-chart .nvtooltip table tbody tr td.key,
+.dashboard .main-section .section .middle-box #lock-wait-chart .nvtooltip table tbody tr td.key,
+.dashboard .main-section .section .middle-box #avg-connection-chart .nvtooltip table tbody tr td.key,
+.dashboard .main-section .section .middle-box #data-log-chart .nvtooltip table tbody tr td.key,
+.dashboard .main-section .section .middle-box #connection-chart .nvtooltip table tbody tr td.key,
+.dashboard .main-section .section .middle-box #size-chart .nvtooltip table tbody tr td.key,
+.dashboard .main-section .section .middle-box #server-load-chart .nvtooltip table tbody tr td.key,
+.dashboard .main-section .section .middle-box #communication-server-error-chart .nvtooltip table tbody tr td.key,
+.dashboard .main-section .section .middle-box #database-size-chart .nvtooltip table tbody tr td.key {
+    width: 90px;
+    font-size: 11px;
+    color: #6f7d95;
+    font-weight: 100;
+}
+/*.dashboard .main-section .section .middle-box #performance-chart .nvtooltip table tbody tr td.value,*/
+
+.dashboard .main-section .section .middle-box #performance-chart-onguard .nvtooltip table tbody tr td.value,
+.dashboard .main-section .section .middle-box #error-log-chart .nvtooltip table tbody tr td.value,
+.dashboard .main-section .section .middle-box #lock-wait-chart .nvtooltip table tbody tr td.value,
+.dashboard .main-section .section .middle-box #avg-connection-chart .nvtooltip table tbody tr td.value,
+.dashboard .main-section .section .middle-box #data-log-chart .nvtooltip table tbody tr td.value,
+.dashboard .main-section .section .middle-box #connection-chart .nvtooltip table tbody tr td.value,
+.dashboard .main-section .section .middle-box #size-chart .nvtooltip table tbody tr td.value,
+.dashboard .main-section .section .middle-box #server-load-chart .nvtooltip table tbody tr td.value,
+.dashboard .main-section .section .middle-box #communication-server-error-chart .nvtooltip table tbody tr td.value,
+.dashboard .main-section .section .middle-box #database-size-chart .nvtooltip table tbody tr td.value {
+    font-size: 11px;
+    color: #6f7d95;
+    font-weight: normal;
+    padding-right: 15px;
+}
+/*.dashboard .main-section .section .middle-box #performance-chart .nvtooltip table tbody tr:first-child td,*/
+
+.dashboard .main-section .section .middle-box #performance-chart-onguard .nvtooltip table tbody tr:first-child td,
+.dashboard .main-section .section .middle-box #error-log-chart .nvtooltip table tbody tr:first-child td,
+.dashboard .main-section .section .middle-box #lock-wait-chart .nvtooltip table tbody tr:first-child td,
+.dashboard .main-section .section .middle-box #avg-connection-chart .nvtooltip table tbody tr:first-child td,
+.dashboard .main-section .section .middle-box #data-log-chart .nvtooltip table tbody tr:first-child td,
+.dashboard .main-section .section .middle-box #connection-chart .nvtooltip table tbody tr:first-child td,
+.dashboard .main-section .section .middle-box #size-chart .nvtooltip table tbody tr:first-child td,
+.dashboard .main-section .section .middle-box #server-load-chart .nvtooltip table tbody tr:first-child td,
+.dashboard .main-section .section .middle-box #communication-server-error-chart .nvtooltip table tbody tr:first-child td,
+.dashboard .main-section .section .middle-box #database-size-chart .nvtooltip table tbody tr:first-child td {
+    padding-top: 2px;
+}
+/*.dashboard .main-section .section .middle-box #performance-chart .nvtooltip table tbody tr:last-child td,*/
+
+.dashboard .main-section .section .middle-box #performance-chart-onguard .nvtooltip table tbody tr:last-child td,
+.dashboard .main-section .section .middle-box #error-log-chart .nvtooltip table tbody tr:last-child td,
+.dashboard .main-section .section .middle-box #lock-wait-chart .nvtooltip table tbody tr:first-child td,
+.dashboard .main-section .section .middle-box #avg-connection-chart .nvtooltip table tbody tr:last-child td,
+.dashboard .main-section .section .middle-box #data-log-chart .nvtooltip table tbody tr:last-child td,
+.dashboard .main-section .section .middle-box #connection-chart .nvtooltip table tbody tr:last-child td,
+.dashboard .main-section .section .middle-box #size-chart .nvtooltip table tbody tr:last-child td,
+.dashboard .main-section .section .middle-box #server-load-chart .nvtooltip table tbody tr:last-child td,
+.dashboard .main-section .section .middle-box #communication-server-error-chart .nvtooltip table tbody tr:last-child td,
+.dashboard .main-section .section .middle-box #database-size-chart .nvtooltip table tbody tr:last-child td {
+    padding-bottom: 2px;
+}
+/*
+.dashboard .main-section .section .middle-box #performance-chart .nvtooltip,
+.dashboard .main-section .section .middle-box #performance-chart-onguard .nvtooltip{
+    margin-top: -100px;
+    margin-left: 30px; }
+*/
+
+.dashboard .main-section .section .middle-box #database-size-chart .nvtooltip .content {
+    height: 96px;
+    padding-top: 10px;
+    overflow: hidden;
+    border-radius: 0 0 3px 3px;
+    width: 100%;
+}
+.dashboard .main-section .section .middle-box #communication-server-error-chart .nvtooltip,
+{
+    width: 60px;
+    height: 60px;
+    background-size: 60px 60px;
+    top: 20px !important;
+    margin-left: 0;
+}
+.datepicker-popup {
+    position: absolute;
+    z-index: 103;
+    border-radius: 0 0 3px 3px;
+    left: 352px;
+    top: 46px;
+    min-height: 50px;
+    width: 299px;
+    background: white;
+    display: none;
+    border: 1px solid #DCDBDC;
+    padding-top: 6px;
+    font-size: 12px;
+}
+.datepicker-popup .input-cnt.datepicker {
+    display: inline-block;
+    overflow: hidden;
+    background: #fff;
+}
+/*
+.datepicker-popup .input-cnt.datepicker input,
+.datepicker-popup .input-cnt-config.datepicker input  {
+    margin-left: 2px;
+    background: url("../i/date-picker-icon.png") no-repeat 100% 0 #fff; }
+.datepicker-popup .input-cnt.datepicker:hover input{
+    background: url("../i/date-picker-icon.png") no-repeat 100% 0 #05BBD3;
+    color: white;}
+
+.datepicker-popup .input-cnt-config.datepicker{
+    float:left;
+    margin-right: 5px;
+}
+*/
+
+.datepicker-popup .input-cnt.datepicker input.date-picker {
+    border: 0;
+    width: 124px;
+    color: #05BBD3;
+    padding: 0 5px;
+    font-weight: 500;
+    border-bottom: 1px solid #f6f6f6;
+    background: url(../i/date-picker-arrow.png) right center no-repeat;
+    background-color: #ffffff;
+}
+.datepicker-popup .calendar-icon {
+    background-position: -16px -11px;
+    height: 25px;
+    width: 17px;
+    margin: 0 7px 0 13px;
+    display: inline-block;
+}
+/*
+#communication-server-error-chart .nvtooltip .trendup{
+    display: inline-block;
+    content: "";
+    background: url("../i/slider-state-icons.png") no-repeat 10px 0;
+    background-position: 10px 0px;
+    width: 25px;
+    height: 13px;
+    position: relative;
+    top: 14px;
+    left: -35px; }
+
+#communication-server-error-chart .nvtooltip .trenddown{
+    display: inline-block;
+    content: "";
+    background: url("../i/slider-state-icons.png") no-repeat 10px -26px;
+    width: 25px;
+    height: 13px;
+    position: relative;
+    top: 14px;
+    left: -35px; }
+
+#communication-server-error-chart .nvtooltip .tooltp{
+    display: inline-block;
+    position: relative;
+    left:12px;
+    top: -4px;
+}
+
+#communication-server-error-chart .nvtooltip .tooltptrendup{
+    display: inline-block;
+    position: relative;
+    left:30px;
+    top: -5px;
+    color: lightgreen;
+}
+
+#communication-server-error-chart .nvtooltip .tooltptrenddown{
+    display: inline-block;
+    position: relative;
+    left:30px;
+    top: -5px;
+    color: orange;
+}
+*/

@@ -1,0 +1,102 @@
+{"data":[
+    {
+        "key":"CPU Usage",
+        "values": [
+            {
+                "x": "OnGuardSrvr1",
+                "y": "95"
+            },
+            {
+                "x": "DbServer1",
+                "y": "95"
+            },
+            {
+                "x": "CommServerWC1",
+                "y": "67"
+            },
+            {
+                "x": "CommServerMA1",
+                "y": "105"
+            },
+            {
+                "x": "CommServerEC1",
+                "y": "60"
+            }
+        ]
+    },
+    {
+        "key":"Memory Usage",
+        "values": [
+            {
+                "x": "OnGuardSrvr1",
+                "y": "85"
+            },
+            {
+                "x": "DbServer1",
+                "y": "65"
+            },
+            {
+                "x": "CommServerWC1",
+                "y": "70"
+            },
+            {
+                "x": "CommServerMA1",
+                "y": "75"
+            },
+            {
+                "x": "CommServerEC1",
+                "y": "57"
+            }
+        ]
+    },
+    {
+        "key":"Hard Drive",
+        "values": [
+            {
+                "x": "OnGuardSrvr1",
+                "y": "64"
+            },
+            {
+                "x": "DbServer1",
+                "y": "74"
+            },
+            {
+                "x": "CommServerWC1",
+                "y": "62"
+            },
+            {
+                "x": "CommServerMA1",
+                "y": "62"
+            },
+            {
+                "x": "CommServerEC1",
+                "y": "82"
+            }
+        ]
+    },
+    {
+        "key":"Network Usage",
+        "values": [
+            {
+                "x": "OnGuardSrvr1",
+                "y": "85"
+            },
+            {
+                "x": "DbServer1",
+                "y": "65"
+            },
+            {
+                "x": "CommServerWC1",
+                "y": "70"
+            },
+            {
+                "x": "CommServerMA1",
+                "y": "75"
+            },
+            {
+                "x": "CommServerEC1",
+                "y": "83"
+            }
+        ]
+    }
+]}

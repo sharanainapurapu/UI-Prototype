@@ -1,0 +1,68 @@
+<!doctype html>
+<html data-ng-app="repoApp">
+<head>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0" >
+    <!-- google fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
+
+    <!-- CSS Style -->
+    <link href="css/nv.d3.css" rel="stylesheet" type="text/css">
+    <link href="css/jquery-ui.min.css" rel="stylesheet" type="text/css">
+    <link href="css/slick.css" rel="stylesheet" type="text/css">
+    <link href="css/fullcalendar.css" rel="stylesheet" type="text/css">
+    <link href="css/jquery.ui.timepicker.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/screen.css" rel="stylesheet" type="text/css">
+
+    <title>OnGuard Dashboard</title>
+
+    <!--javascript-->
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.ui.timepicker.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="js/d3.v3.js"></script>
+    <script src="js/nv.d3.js"></script>
+    <script src="js/moment.min.js"></script>
+    <script src="js/fullcalendar.js"></script>
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/custom-radio-check.js"></script>
+    <script src="js/underscore.js"></script>
+    <script src="js/moment.js"></script>
+
+    <script src="js/scripts.js"></script>
+
+</head>
+
+<body>
+
+<!--header-->
+<header class="login-header">
+    <div class="container">
+        <!--logo-->
+        <a href="javascript:" class="logo"></a>
+    </div>
+</header>
+
+<!--login box-->
+<div class="login-box">
+    <h2>User Login</h2>
+    <span class="note">To continue please fill in your login details.</span>
+    <!--login form-->
+    <form name="loginForm" class="login-form" action="system-overview-page.html" method="get" autocomplete="off">
+        <input type="text" placeholder="Username" name="username" class=""/>
+        <span class="error-msg">Username/Password combination not found</span>
+        <input type="password" placeholder="Password" name="password"/>
+        <select>
+            <option value="0">Directory</option>
+            <option value="1">Directory1</option>
+            <option value="2">Directory2</option>
+        </select>
+        <a href="javascript:" class="btn">Login</a>
+    </form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,3583 @@
+<!doctype html>
+<html data-ng-app="repoApp">
+<head>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0">
+    <!-- google fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
+
+    <!-- CSS Style -->
+    <link href="css/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css">
+    <link href="css/nv.d3.css" rel="stylesheet" type="text/css">
+    <link href="css/jquery-ui.min.css" rel="stylesheet" type="text/css">
+    <link href="css/slick.css" rel="stylesheet" type="text/css">
+    <link href="css/fullcalendar.css" rel="stylesheet" type="text/css">
+    <link href="css/jquery.ui.timepicker.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/screen.css" rel="stylesheet" type="text/css">
+    <link href="css/update.css" rel="stylesheet" type="text/css">
+    <link href="css/css/font-awesome.css" rel="stylesheet" type="text/css">
+
+    <title>OnGuard Dashboard</title>
+
+    <!--javascript-->
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.ui.timepicker.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="js/d3.v3.js"></script>
+    <script src="js/nv.d3.js"></script>
+    <script src="js/moment.min.js"></script>
+    <script src="js/fullcalendar.js"></script>
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/custom-radio-check.js"></script>
+    <script src="js/underscore.js"></script>
+    <script src="js/moment.js"></script>
+
+    <script src="js/scripts.js"></script>
+
+</head>
+
+<body class="dashboard expand">
+<!-- side bar -->
+<body class="dashboard expand">
+<!-- side bar -->
+
+<aside>
+    <!-- logo -->
+    <a href="javascript:;" class="logo icon"></a>
+    <!-- side bar navigation -->
+    <nav>
+        <ul>
+            <li ><a href="system-overview-page.html"><span class="icon system-icon"></span> System Overview </a></li>
+            <li><a href="area-utilization.html"><span class="icon2 area-utilization-icon"></span> Area Utilization</a></li>
+            <li ><a href="onGuard-server.html"><span class="icon2 ongaurd-icon"></span> OnGuard Server</a></li>
+            <li ><a href="database-servers.html"><span class="icon2 database-server-icon"></span> Database Servers</a></li>
+            <li><a href="javascript:;" id="communication-server"><span class="icon2 communication-server-icon"></span> Communication Servers</a></li>
+
+        </ul>
+        <ul class="sub-menu" id="communication-server-sub-menu">
+            <li><a href="west-coast-communication-server.html">CommServerWC1</a></li>
+            <li class="active"><a href="mid-atlantic-communication-server.html">CommServerMA1</a></li>
+            <li ><a href="east-coast-communication-server.html">CommServerEC1</a></li>
+        </ul>
+        <ul>
+            <li><a href="javascript:;" class="collapse-button"><span class="icon collapse-icon"></span> Collapse Menu</a>
+        </ul>
+    </nav>
+</aside>
+<div class="main-section">
+
+<!-- header -->
+<header>
+
+
+    <div class="datepicker-popup popup">
+        <div class="date-range">
+            <div class="input-cnt datepicker">
+                <input class="date-picker" readonly name="fromDate1" type="text" placeholder="Type Event Name"/>
+            </div>
+            <div class="calendar-icon icon5"></div>
+            <div class="input-cnt datepicker last">
+                <input class="date-picker" readonly name="toDate1" type="text" placeholder="Type Event Name"/>
+            </div>
+        </div>
+    </div>
+
+    <div id="watchDropDown"class="main-logo dropDownArrow">
+        <a href="javascript:;" class="logo">WATCH</a>
+    </div>
+
+    <div id="watchDropDown-popup" class="watchDropDown-popup popup">
+        <span class="arrow"></span>
+        <!--inner content-->
+        <div class="popup-inner">
+            <ul>
+                <li>
+                    <a href="#" class="appIcons app1"><i class="fa fa-headphones"></i> </a>
+                    <span>app1</span>
+                </li>
+                <li>
+                    <a href="#" class="appIcons app2"><i class="fa fa-graduation-cap"></i></a>
+                    <span>app2</span>
+                </li>
+                <li>
+                    <a href="#" class="appIcons app3"><i class="fa fa-shield"></i></a>
+                    <span>app3</span>
+                </li>
+                <li>
+                    <a href="#" class="appIcons app4"><i class="fa fa-film"></i></a>
+                    <span>app4</span>
+                </li>                                                
+                
+            </ul>
+        </div>
+    </div>
+        
+    <a href="login.html" class="logout">
+        Logout
+    </a>
+    <span class="separator">|</span>
+    <a href="javascript:" class="user">
+        <span class="icon2 avator-icon"></span>
+        John Doe
+    </a>
+    <a href="javascript:;" class="alert alertInfo">
+        <span class="alert-icon">
+            <span class="countx"><span class="num">5</span></span>
+        </span>
+    </a>
+
+    <a href="javascript:;" class="settings">
+        <span class="settings-icon"></span>
+    </a>
+    
+    <div class="datepicker-popup popup">
+        <div class="date-range">
+            <div class="input-cnt datepicker">
+                <input class="date-picker" readonly name="fromDate1" type="text" placeholder="Type Event Name"/>
+            </div>
+            <div class="calendar-icon icon5"></div>
+            <div class="input-cnt datepicker last">
+                <input class="date-picker" readonly name="toDate1" type="text" placeholder="Type Event Name"/>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="alerts-dashboard">
+    <div class="header border-pad">
+        Events
+        <a href="javascript:" class="add-events-btn"><span>Add</span></a>
+        <a href="javascript:" class="collapse-events"></a>
+    </div>
+    <div class="add-events">
+        <div class="add-area">
+            <!--row-->
+            <div class="row">
+                <span class="label">Subject</span>
+
+                <div class="input-cnt">
+                    <input type="text" name="subject" placeholder="Type Event Name"/>
+                </div>
+            </div>
+            <div class="row">
+                <span class="label">Location</span>
+
+                <div class="input-cnt">
+                    <input type="text" name="location" placeholder="Event Location"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="width40 fl">
+                    <span class="label">Start Date/Time</span>
+
+                    <div class="input-cnt datepicker" id="eventStartDate">
+                        <input class="date-picker"  name="eventStartDate" type="text"
+                               placeholder="Type Event Start Date"/>
+                    </div>
+                    <div class="input-cnt timepicker">
+                        <input class="time-picker" name="eventStartTime" type="text"
+                               placeholder="Type Event Start Time"/>
+                    </div>
+                </div>
+                <div class="width40 fr">
+                    <span class="label">End Date/Time</span>
+
+                    <div class="input-cnt datepicker" id="eventEndDate">
+                        <input class="date-picker"  name="eventEndDate" type="text"
+                               placeholder="Type Event End Date"/>
+                    </div>
+                    <div class="input-cnt timepicker">
+                        <input class="time-picker" name="eventEndTime" type="text"
+                               placeholder="Type Event End Time"/>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="row">
+                <div class="width40 fl">
+                    <span class="label">Priority</span>
+
+                    <div class="input-cnt">
+                        <!--                                <input type="text" name="priority" placeholder="Event Priority"/>-->
+                        <select id="priority" name="priority">
+                            <option value="volvo">High</option>
+                            <option value="saab">Medium</option>
+                            <option value="mercedes">Low</option>
+                        </select>
+
+                    </div>
+                </div>
+                <div class="width40 fr">
+                    <span class="label">Reoccurence</span>
+
+                    <div class="input-cnt">
+                        <!--<input type="text" name="reoccurence" placeholder="Event Reoccurence"/>-->
+                        <select name="reoccurence" id="reoccurence">
+                            <option value="volvo">Daily</option>
+                            <option value="saab">Weekly</option>
+                            <option value="mercedes">Monthly</option>
+                            <option value="audi">Yearly</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+
+                <div class="btn-row fr">
+                    <a href="javascript:" class="btn saveEvent">Save Event</a>
+                    <a href="javascript:" class="btn cancelEvent">Cancel</a>
+                </div>
+                <div class="clearfix"></div>
+
+        </div>
+    </div>
+    <div class="events-cnt">
+        <div class="header margin-top">
+            <div class="month">
+                <div class="btn-cnt">
+                    <a class="date-icon"></a>
+                    <span>October 2014</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="calendar-header">
+            <div class="calendar-month">
+                <div class="btn-cnt">
+                    <a href="javascript:" class="next"></a>
+                    <span>October 2014</span>
+                    <a href="javascript:" class="prev"></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="view" id="calendar-view">
+            <!--calendar-->
+            <div id="calendar"></div>
+            <!--events-->
+            <div class="events">
+                <ul>
+                    <li><a href="west-coast-communication-server.html">Front Lobby reader set to “Unlock”</a>
+                        <span>1 minute ago</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="header border-pad">
+                Errors<div class="errcount">5</div>
+                <a href="javascript:" class="collapse-error"></a>
+    </div>
+    <div class="errorWarningBlock errorSection">
+            <ul>
+                <li>
+                    <a href="west-coast-communication-server.html">Front Lobby reader set to “Unlock”</a>
+                    <span>1 minute ago</span>
+                </li>
+                <li>
+                    <a href="east-coast-communication-server.html">IT Server Room reader set to “Card Only”</a>
+                    <span>10 minutes ago</span>
+                </li>
+                <li>
+                    <a href="mid-atlantic-communication-server.html">Rear Shipping Dock rear set to “Locked”</a>
+                    <span>2 Hours Ago</span>
+                </li>
+                <li>
+                    <a href="east-coast-communication-server.html">Rear Siren set to “Masked” </a>
+                    <span>2 Hours ago</span>
+                </li>
+                <li>
+                    <a href="west-coast-communication-server.html">Front Lobby Duress set to “Masked”</a>
+                    <span>1 Day Ago</span>
+                </li>
+            </ul>
+            
+        </div><!-- Error & Warning Popup-->
+
+        <div class="header border-pad">
+                Warning<div class="errcount">5</div>
+                <a href="javascript:" class="collapse-warning"></a>
+        </div>
+        <div class="errorWarningBlock warningSection">
+            <ul>
+                <li>
+                    <a href="east-coast-communication-server.html">Server 4  Etr Detected</a>
+                    <span>10 minutes ago</span>
+                </li>
+                <li>
+                    <a href="west-coast-communication-server.html">Server 3 FailedRPC Errors </a>
+                    <span>40 minutes ago</span>
+                </li>
+                <li>
+                    <a href="mid-atlantic-communication-server.html">OG Application Kernel log</a>
+                    <span>3 Hours Ago</span>
+                </li>
+            </ul>
+        </div>
+</div>
+<!--system check-->
+<div class="system-check system-check-2">
+    <div>
+        <h2>Total System Counts</h2>
+        <div class="system-check-slider">
+            <!--item-->
+            <div class="item" data-details="87-0.04-50-up-Access Panels">
+                <span class="percentage">&nbsp;</span>
+                <span class="count">&nbsp;</span>
+
+                <div class="slide-cnt">
+                    <div class="slide-bar"></div>
+                    <div class="slide-ball"></div>
+                </div>
+                <span class="name">&nbsp;</span>
+            </div>
+            <!--item-->
+            <div class="item" data-details="324-0.04-50-down-Readers">
+                <span class="percentage">&nbsp;</span>
+                <span class="count">&nbsp;</span>
+
+                <div class="slide-cnt">
+                    <div class="slide-bar"></div>
+                    <div class="slide-ball"></div>
+                </div>
+                <span class="name">&nbsp;</span>
+            </div>
+            <!--item-->
+            <div class="item" data-details="23-0.04-50-up-Inputs">
+                <span class="percentage">&nbsp;</span>
+                <span class="count">&nbsp;</span>
+
+                <div class="slide-cnt">
+                    <div class="slide-bar"></div>
+                    <div class="slide-ball"></div>
+                </div>
+                <span class="name">&nbsp;</span>
+            </div>
+            <!--item-->
+            <div class="item" data-details="109-0.04-50-up-Outputs">
+                <span class="percentage">&nbsp;</span>
+                <span class="count">&nbsp;</span>
+
+                <div class="slide-cnt">
+                    <div class="slide-bar"></div>
+                    <div class="slide-ball"></div>
+                </div>
+                <span class="name">&nbsp;</span>
+            </div>
+            <div class="item" data-details="35,098-0.04-50-up-Cardholders">
+                <span class="percentage">&nbsp;</span>
+                <span class="count">&nbsp;</span>
+
+                <div class="slide-cnt">
+                    <div class="slide-bar"></div>
+                    <div class="slide-ball"></div>
+                </div>
+                <span class="name">&nbsp;</span>
+            </div>
+            <div class="item" data-details="45,678-0.04-50-up-Badges">
+                <span class="percentage">&nbsp;</span>
+                <span class="count">&nbsp;</span>
+
+                <div class="slide-cnt">
+                    <div class="slide-bar"></div>
+                    <div class="slide-ball"></div>
+                </div>
+                <span class="name">&nbsp;</span>
+            </div>
+            <!--item-->
+            <div class="item" data-details="12,657-0.04-50-up-Visitors">
+                <span class="percentage">&nbsp;</span>
+                <span class="count">&nbsp;</span>
+
+                <div class="slide-cnt">
+                    <div class="slide-bar"></div>
+                    <div class="slide-ball"></div>
+                </div>
+                <span class="name">&nbsp;</span>
+            </div>
+            <!--item-->
+            <div class="item" data-details="109,875-0.04-50-warn-Visits">
+                <span class="percentage">&nbsp;</span>
+                <span class="count">&nbsp;</span>
+
+                <div class="slide-cnt">
+                    <div class="slide-bar"></div>
+                    <div class="slide-ball"></div>
+                </div>
+                <span class="name">&nbsp;</span>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!--/system check-->
+<div class="section clearfix">
+<!--
+    <div class="middle-box margin-bottom">
+        <div class="heading-comm-server">
+            <h2>
+                CommServerMA1
+            </h2>
+        </div>
+    </div>
+-->
+<div class="single-row-table">
+    <div class="all-three">
+        <div class="mid-left-small">
+            <div class="top-box-1 fluid-height">
+                <div class="description">
+                    <h2>System Information</h2>
+
+                    <p>OnGuard 6.6.289</p>
+
+                    <p>Microsoft SQL server 2008 R1</p>
+
+                    <p>IIS 8.5 </p>
+
+                </div>
+            </div>
+        </div>
+        <div class="mid-mid-big">
+            <div class="top-box-1  fluid-height">
+                <div class="description">
+                    <h2>Hardware Counts</h2>
+
+                 <div><span class="abnormalLabel">Access Panel</span><span class="abnormalValue">2</span></div>
+                 <div><span class="abnormalLabel empty">Readers</span><span class="abnormalValue empty">2</span></div>
+                 <div><span class="abnormalLabel">Inputs</span><span class="abnormalValue empty">0</span></div>
+                 <div><span class="abnormalLabel">Outputs</span><span class="abnormalValue">2</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--
+    <div class="top-box left top-full-box">
+        <div class="icon system-icon"></div>
+        <div class="description">
+            <h2>System Information</h2>
+
+            <p>OnGuard 6.6.289</p>
+
+            <p>Windows Server 2008 R1</p>
+
+            <p>Microsoft SQL server 2008 R1</p>
+
+            <p>192.168.1.120</p>
+        </div>
+    </div>
+&lt;!&ndash;
+<div class="top-box right">
+    <div class="icon3 hardware-icon"></div>
+    <div class="description">
+        <h2>Hardware Counts</h2>
+
+        <p>182 Access Panel</p>
+        <p>996 Readers</p>
+
+        <p>667 Inputs</p>
+
+        <p>911 Outputs</p>
+    </div>
+</div>
+&ndash;&gt;
+<div class="clearfix"></div>
+<div class="middle-box">
+    <div class="title clearfix">
+        <h3>Hardware Counts</h3>
+    </div>
+    <div class="inner">
+        <div class="hardware-counts">
+            <a href="javascript:" class="access-panel">
+                <span>access panel</span>
+                <i id="access-panel">3</i>
+            </a>
+            <a href="javascript:" class="reader">
+                <span>readers</span>
+                <i id="reader">3</i>
+            </a>
+            <a href="javascript:" class="input">
+                <span>inputs</span>
+                <i id="input">3</i>
+            </a>
+            <a href="javascript:" class="output">
+                <span>output</span>
+                <i id="output">2</i>
+            </a>
+        </div>
+    </div>
+</div>
+-->
+
+    <div class="clearfix"></div>
+    <!-- System performance -->
+    <div class="middle-box">
+        <div class="title clearfix">
+            <h3>System performance</h3>
+            <span class="alert">
+                <span class="logo"><i class="fa fa-bell"></i></span>
+                <span class="label"><a href="javascript:void(0)">Alerts</a></span>
+            </span>
+
+            <div class="response-time">
+                                <span>
+                                    Response time
+                                </span>
+            </div>
+
+            <!-- legend -->
+<!--
+            <div class="legend">
+                <p><span class="first"></span> CPU</p>
+
+                <p><span class="second"></span> Memory</p>
+
+                <p><span class="third"></span> Hard drive</p>
+
+                <p><span class="fourth"></span> Peak</p>
+            </div>
+-->
+                </div>
+
+        <div class="inner">
+            <div id="performance-chart">
+                <svg></svg>
+            </div>
+        </div>
+    </div>
+
+    <div class="clearfix"></div>
+
+    <div class="height300">
+    <div class="middle-box left">
+        <div class="title clearfix">
+            <h3>Server throughput</h3>
+        </div>
+        <div class="lower-head text-center">
+            <p>Peak Throughput</p>
+            <p>(For a single resource, larger is beter)</p>
+        </div>
+
+        <div class="inner">
+            <!--chart-->
+            <div id="east-server-throughput-chart">
+                <svg></svg>
+            </div>
+        </div>
+    </div>
+    <!-- Error log monitor -->
+    <div class="middle-box right">
+        <div class="title clearfix">
+            <h3>Server load</h3>
+            <span class="alert">
+                <span class="logo"><i class="fa fa-bell"></i></span>
+                <span class="label"><a href="javascript:void(0)">Alerts</a></span>
+            </span>
+        </div>
+        <div class="inner">
+            <!--chart-->
+            <div id="server-load-chart">
+                <svg></svg>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <div class="clearfix"></div>
+
+    <div class="height500">
+    <div class="middle-box left">
+        <div class="title clearfix">
+            <h3>Communication server error monitor</h3>
+            <span class="alert">
+                <span class="logo"><i class="fa fa-bell"></i></span>
+                <span class="label"><a href="javascript:void(0)">Alerts</a></span>
+            </span>
+        </div>
+        <div class="inner">
+            <!--chart-->
+            <div id="communication-server-error-chart">
+                <svg></svg>
+            </div>
+            <!--legend-->
+<!--
+            <div class="chart-legend">
+                <div class="" id="chart-legend1">
+                    <span class="name">NAK Counter</span>
+                    <span class="text">Corrupt communication to Panel</span>
+                    <span class="count">Total Count is <strong>1234</strong></span>
+                </div>
+                <div class="" id="chart-legend2">
+                    <span class="name">FailedRPC Counter</span>
+                    <span class="text">No communication to Panel</span>
+                    <span class="count">Total Count is <strong>1234</strong></span>
+                </div>
+            </div>
+-->
+
+        </div>
+    </div>
+    <!-- Error log monitor -->
+    <div class="middle-box right">
+        <div class="title clearfix">
+            <h3>Communication Server Log File Growth</h3>
+            <span class="alert">
+                <span class="logo"><i class="fa fa-bell"></i></span>
+                <span class="label"><a href="javascript:void(0)">Alerts</a></span>
+            </span>
+        </div>
+        <div class="inner">
+            <!--chart-->
+            <div id="error-log-chart">
+                <svg></svg>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="clearfix"></div>
+<div class="middle-box last-box">
+    <div class="title clearfix">
+        <h3>
+            OnGuard Alarm
+        </h3>
+        <!-- legend -->
+<!--
+        <div class="legend">
+            <p><span class="first"></span> Access granted</p>
+
+            <p><span class="second"></span> Invalid pin</p>
+
+            <p><span class="third"></span> Door forced open</p>
+
+            <p><span class="fourth"></span> Door held open</p>
+        </div>
+-->
+    </div>
+    <div class="lower-head">
+        <div class="right-align">
+        <div class="alarm-icon">
+        </div>
+        <label class="dark-red">
+            No events are generated in xx minutes.
+        </label>
+        </div>
+    </div>
+    <div class="inner">
+        <div id="alarm-chart">
+            <svg></svg>
+        </div>
+    </div>
+</div>
+
+<!--    <div class="middle-box">
+        <div class="title clearfix">
+            <h3>
+                OnGuard Alarm
+            </h3>
+        </div>
+        <div class="lower-head">
+            <div class="alarm-icon">
+            </div>
+            <label>
+                No events are generated in xx minutes.
+            </label>
+        </div>
+
+        <div class="inner ">
+            <div class="chart-holder" id="onGuardAlarms">
+                <div class="scroll-content">
+                    &lt;!&ndash;chart&ndash;&gt;
+                    <div id="alarm-chart2" class="alarm-chart">
+                        <svg></svg>
+                    </div>
+                    &lt;!&ndash;chart&ndash;&gt;
+                    <div id="alarm-chart3" class="alarm-chart">
+                        <svg></svg>
+                    </div>
+                    &lt;!&ndash;chart&ndash;&gt;
+                    <div id="alarm-chart4" class="alarm-chart">
+                        <svg></svg>
+                    </div>
+                    &lt;!&ndash;chart&ndash;&gt;
+                    <div id="alarm-chart5" class="alarm-chart">
+                        <svg></svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>-->
+</div>
+</div>
+<!--overlay -->
+<div class="overlay"></div>
+<div id="upgrade-modal">
+    <div class="close-icon"></div>
+</div>
+
+<div id="chart" class="response-toolTip">
+    <span class="arrow"></span>
+    <header> Response time </header>
+    <div class="content">
+        <div id="area-chart" class="area-chart">
+            <svg></svg>
+        </div>
+        <div class="speeds">
+            <table>
+                <tr>
+                    <td>Avg. response time</td>
+                    <td>Slowest avg. response time</td>
+                    <td>Fastest avg. response time</td>
+                </tr>
+                <tr>
+                    <td>748 ms</td>
+                    <td>1,961 ms</td>
+                    <td>0 ms</td>
+                </tr>
+            </table>
+        </div>
+        <div class="send-info-yes">
+            <table>
+                <tr>
+                    <td><p><span>Do you want to send the info into database?</span></p></td>
+                </tr>
+
+                <!-- Unnamed (Shape) -->
+                <tr>
+                    <td><p><span>Yes</span></p></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<!--setting modal-->
+<div class="modal-overlay"></div>
+<div class="settings-modal">
+<!--header-->
+<header>
+    Configurations
+    <a href="javascript:" class="close-modal"></a>
+</header>
+<!--add events-->
+
+
+
+
+<!--tabs-->
+<div class="config-tabs">
+<ul>
+    <li><a href="#generalSettings">General settings </a></li>
+    <li><a href="#systemOverview">System overview</a></li>
+    <li><a href="#areaUtilization">Area utilization</a></li>
+    <li><a href="#onGuardServer">OnGuard server</a></li>
+    <li><a href="#databaseServer">Database server</a></li>
+    <li><a href="#communicationServer">Communication server</a></li>
+</ul>
+<div class="view" id="generalSettings">
+
+
+<div class="accordion">
+
+<h3>Historical mode<i class="arrow"></i>
+    <a href="javascript:" class="btn mini-btn edit">Edit</a>
+    <a href="javascript:" class="btn mini-btn save">Save</a>
+</h3>
+<div>
+    <table>
+        <tbody>
+        <tr>
+            <td class="label">
+                <div>
+                    Set Historical Mode Date
+                </div>
+            </td>
+            <td>
+                <div class="date-range">
+
+                    <div class="input-cnt-config datepicker">
+                        <input class="date-picker" readonly  name="fromDate1" type="text" placeholder="Type Event Name"/>
+                    </div>
+                    <span class="sep">-</span>
+                    <div class="input-cnt-config datepicker last">
+                        <input class="date-picker" readonly name="toDate1" type="text" placeholder="Type Event Name"/>
+                    </div>
+
+                    <a href="javascript:" class="btn mini-btn">Set Historical Mode</a>
+
+                </div>
+            </td>
+        </tr>
+
+        </tbody>
+    </table>
+</div>
+
+<h3>Alerts<i class="arrow"></i>
+    <a href="javascript:" class="btn mini-btn addbtn"><i class="add">&nbsp;</i></a>
+    <a href="javascript:" class="btn mini-btn edit">Edit</a>
+    <a href="javascript:" class="btn mini-btn save">Save</a>
+</h3>
+<div>
+
+<table class="td-center" >
+<tbody>
+<tr class="e-labels">
+    <td class="label">
+        <div>
+
+            Alert name
+        </div>
+    </td>
+    <td class="label">
+        <div>Date created</div>
+    </td>
+    <td class="label">
+        <div>Recipients</div>
+    </td>
+    <td class="label">
+        <div>Alerts remaining</div>
+    </td>
+    <td class="close"></td>
+</tr>
+<tr>
+    <td class="label">
+        <div>
+            <label class="label_check" >
+                <input name="KPI"  type="checkbox" />
+            </label>
+            Lorem ipsum alert name
+        </div>
+    </td>
+    <td class="label">
+        <div>24-09-2014 09:00:25</div>
+    </td>
+    <td class="label">
+        <div>4 Individuals</div>
+    </td>
+    <td class="label">
+        <div>3 alerts remaining</div>
+    </td>
+    <td class="close"><a href="javascript:"></a></td>
+</tr>
+<tr>
+    <td class="label">
+        <div>
+            <label class="label_check" for="all2">
+                <input name="KPI1" id="all2" type="checkbox" />
+            </label>
+            Lorem ipsum alert name
+        </div>
+    </td>
+    <td class="label">
+        <div>24-09-2014 09:00:25</div>
+    </td>
+    <td class="label">
+        <div>4 Individuals</div>
+    </td>
+    <td class="label">
+        <div>3 alerts remaining</div>
+    </td>
+    <td class="close"><a href="javascript:"></a></td>
+</tr>
+<tr>
+    <td class="label">
+        <div>
+            <label class="label_check" for="all12">
+                <input name="KPI2" id="all12" type="checkbox" />
+            </label>
+            Lorem Ipsum Alert Name
+        </div>
+    </td>
+    <td class="label">
+        <div>24-09-2014 09:00:25</div>
+    </td>
+    <td class="label">
+        <div>4 Individuals</div>
+    </td>
+    <td class="label">
+        <div>3 Alerts Remaining</div>
+    </td>
+    <td class="close"><a href="javascript:"></a></td>
+</tr>
+<tr>
+    <td class="label">
+        <div>
+            <label class="label_check" for="all13">
+                <input name="KPI3" id="all13" type="checkbox" />
+            </label>
+            Lorem Ipsum Alert Name
+        </div>
+    </td>
+    <td class="label">
+        <div>24-09-2014 09:00:25</div>
+    </td>
+    <td class="label">
+        <div>4 Individuals</div>
+    </td>
+    <td class="label">
+        <div>3 Alerts Remaining</div>
+    </td>
+    <td class="close"><a href="javascript:"></a></td>
+</tr>
+<tr>
+    <td class="label">
+        <div>
+            <label class="label_check" for="all14">
+                <input name="KPI4" id="all14" type="checkbox" />
+            </label>
+            Lorem Ipsum Alert Name
+        </div>
+    </td>
+    <td class="label">
+        <div>24-09-2014 09:00:25</div>
+    </td>
+    <td class="label">
+        <div>4 Individuals</div>
+    </td>
+    <td class="label">
+        <div>3 Alerts Remaining</div>
+    </td>
+    <td class="close"><a href="javascript:"></a></td>
+</tr>
+<tr>
+    <td class="label">
+        <div>
+            <label class="label_check" for="all15">
+                <input name="KPI5" id="all15" type="checkbox" />
+            </label>
+            Lorem Ipsum Alert Name
+        </div>
+    </td>
+    <td class="label">
+        <div>24-09-2014 09:00:25</div>
+    </td>
+    <td class="label">
+        <div>4 Individuals</div>
+    </td>
+    <td class="label">
+        <div>3 Alerts Remaining</div>
+    </td>
+    <td class="close"><a href="javascript:"></a></td>
+</tr>
+<tr>
+    <td class="label">
+        <div>
+            <label class="label_check" >
+                <input name="KPI6"  type="checkbox" />
+            </label>
+            Lorem Ipsum Alert Name
+        </div>
+    </td>
+    <td class="label">
+        <div>24-09-2014 09:00:25</div>
+    </td>
+    <td class="label">
+        <div>4 Individuals</div>
+    </td>
+    <td class="label">
+        <div>3 Alerts Remaining</div>
+    </td>
+    <td class="close"><a href="javascript:"></a></td>
+</tr>
+<tr>
+    <td class="label">
+        <div>
+            <label class="label_check" for="all17">
+                <input name="KPI7" id="all17" type="checkbox" />
+            </label>
+            Lorem Ipsum Alert Name
+        </div>
+    </td>
+    <td class="label">
+        <div>24-09-2014 09:00:25</div>
+    </td>
+    <td class="label">
+        <div>4 Individuals</div>
+    </td>
+    <td class="label">
+        <div>3 Alerts Remaining</div>
+    </td>
+    <td class="close"><a href="javascript:"></a></td>
+</tr>
+<tr>
+    <td class="label">
+        <div>
+            <label class="label_check" for="all18">
+                <input name="KPI8" id="all18" type="checkbox" />
+            </label>
+            Lorem Ipsum Alert Name
+        </div>
+    </td>
+    <td class="label">
+        <div>24-09-2014 09:00:25</div>
+    </td>
+    <td class="label">
+        <div>4 Individuals</div>
+    </td>
+    <td class="label">
+        <div>3 Alerts Remaining</div>
+    </td>
+    <td class="close"><a href="javascript:"></a></td>
+</tr>
+
+
+</tbody>
+</table>
+
+
+</div>
+
+<h3>Expire notification<i class="arrow"></i>
+    <a href="javascript:" class="btn mini-btn edit">EDIT</a>
+</h3>
+<div>
+
+    <table>
+        <tbody>
+        <tr>
+            <td class="label">
+                <div>
+                    Set Expire Notification Date
+                </div>
+            </td>
+            <td>
+                <div class="alert_time">
+                    <label class="label_radio"><input type="radio" name="days" value="90"><span>90 Days</span></label>
+                    <label class="label_radio"><input type="radio" name="days" value="60">60 Days</label>
+                    <label class="label_radio"><input type="radio" name="days" value="30">30 Days</label>
+                    <label class="label_radio"><input type="radio" name="days" value="10">10 Days</label>
+                    <label class="label_radio"><input type="radio" name="days" value="1" checked>1 Day</label>
+                </div>
+
+                <a href="javascript:" class="btn mini-btn">SET EXPIRE Notification</a>
+            </td>
+        </tr>
+
+        </tbody>
+    </table>
+
+
+</div>
+
+<h3>Export<i class="arrow"></i>
+    <a href="javascript:" class="btn mini-btn edit">EDIT</a>
+    <a href="javascript:" class="btn mini-btn save">SAVE</a>
+</h3>
+<div>
+    <table>
+        <tbody>
+        <tr>
+            <td class="label">
+                <div>
+                    Export Historical Data Report to PDF
+                </div>
+            </td>
+            <td>
+                <div class="date-range">
+
+                    <div class="input-cnt-config datepicker">
+                        <input class="date-picker" readonly  name="fromDate1" type="text" placeholder="Type Event Name"/>
+                    </div>
+                    <span class="sep">-</span>
+                    <div class="input-cnt-config datepicker last">
+                        <input class="date-picker" readonly name="toDate1" type="text" placeholder="Type Event Name"/>
+                    </div>
+
+                    <a href="javascript:" class="btn mini-btn">EXPORT</a>
+
+                </div>
+            </td>
+        </tr>
+
+        </tbody>
+    </table>
+</div>
+</div>
+</div>
+
+<div class="view" id="systemOverview">
+<div class="accordion">
+<h3>Database back-up<i class="arrow"></i>
+    <a href="javascript:" class="btn mini-btn edit">EDIT</a>
+    <a href="javascript:" class="btn mini-btn save">SAVE</a>
+</h3>
+<div>
+    <table>
+        <tbody>
+        <tr>
+            <td class="label">
+                <div>
+                    <label class="label_check" >
+                        <input name="KPI"  type="checkbox" />
+                    </label>
+                    Backup
+                    <span>(<span class="min"></span> - <span class="max"></span> )</span>
+                </div>
+            </td>
+            <td class="slider">
+                <div class="range-slider" id="database-backup" data-val="20-65"></div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<h3>System performance<i class="arrow"></i>
+    <a href="javascript:" class="btn mini-btn edit">EDIT</a>
+    <a href="javascript:" class="btn mini-btn save">SAVE</a>
+</h3>
+<div>
+    <table>
+        <tbody>
+        <tr>
+            <td class="label">
+                <div>
+                    <label class="label_check" >
+                        <input name="KPI"  type="checkbox" />
+                    </label>
+                    CPU
+                    <span>(<span class="min"></span> - <span class="max"></span> )</span>
+                </div>
+            </td>
+            <td class="slider">
+                <div class="range-slider" id="sp-cpu" data-val="20-70"></div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+        <tr class="alt">
+            <td class="label">
+                <div>
+                    <label class="label_check" for="all5">
+                        <input name="KPI" id="all5" type="checkbox" />
+                    </label>
+                    Memory
+                    <span>(<span class="min"></span> - <span class="max"></span> )</span>
+                </div>
+            </td>
+            <td class="slider">
+                <div class="range-slider" id="sp-memory" data-val="32-50"></div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+        <tr>
+            <td class="label">
+                <div>
+                    <label class="label_check" >
+                        <input name="KPI"  type="checkbox" />
+                    </label>
+                    HD
+                    <span>(<span class="min"></span> - <span class="max"></span> )</span>
+                </div>
+            </td>
+            <td class="slider">
+                <div class="range-slider" id="sp-hd" data-val="20-70"></div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+        <tr class="alt">
+            <td class="label">
+                <div>
+                    <label class="label_check" for="all5">
+                        <input name="KPI" id="all5" type="checkbox" />
+                    </label>
+                    Processor
+                    <span>(<span class="min"></span> - <span class="max"></span> )</span>
+                </div>
+            </td>
+            <td class="slider">
+                <div class="range-slider" id="sp-processor" data-val="32-50"></div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+        <tr>
+            <td class="label">
+                <div>
+                    <label class="label_check" >
+                        <input name="KPI"  type="checkbox" />
+                    </label>
+                    Network Usage
+                    <span>(<span class="min"></span> - <span class="max"></span> )</span>
+                </div>
+            </td>
+            <td class="slider">
+                <div class="range-slider" id="sp-peak-usage" data-val="20-70"></div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<h3>Security KPI<i class="arrow"></i>
+    <a href="javascript:" class="btn mini-btn edit">EDIT</a>
+    <a href="javascript:" class="btn mini-btn save">SAVE</a>
+</h3>
+<div>
+<table>
+<tbody>
+<tr>
+    <td class="label">
+        <div>
+
+            <label class="label_check" for="all4">
+                <input name="KPI" id="all4" type="checkbox" />
+            </label>
+            All Events
+            <span>(<span class="min"></span> - <span class="max"></span> )</span>
+        </div>
+    </td>
+    <td class="slider">
+        <div class="range-slider" id="sp-all-events" data-val="20-70"></div>
+    </td>
+    <td class="close"><a href="javascript:"></a></td>
+</tr>
+<tr class="alt">
+    <td class="label">
+        <div>
+            <label class="label_check" >
+                <input name="KPI"  type="checkbox" checked="checked" />
+            </label>
+            Door Forced Open
+            <span>(<span class="min"></span> - <span class="max"></span> )</span>
+        </div>
+    </td>
+    <td class="slider">
+        <div class="range-slider" id="sp-dfo" data-val="30-50"></div>
+    </td>
+    <td class="close"><a href="javascript:"></a></td>
+</tr>
+<tr>
+    <td class="label">
+        <div>
+
+            <label class="label_check" for="held">
+                <input name="KPI" id="held" type="checkbox" />
+            </label>
+            Door Held Open
+            <span>(<span class="min"></span> - <span class="max"></span> )</span>
+        </div>
+    </td>
+    <td class="slider">
+        <div class="range-slider" id="sp-dho" data-val="20-70"></div>
+    </td>
+    <td class="close"><a href="javascript:"></a></td>
+</tr>
+<tr class="alt">
+    <td class="label">
+        <div>
+            <label class="label_check" for="alarm">
+                <input name="KPI" id="alarm" type="checkbox" />
+            </label>
+            Alarm Active
+            <span>(<span class="min"></span> - <span class="max"></span> )</span>
+        </div>
+    </td>
+    <td class="slider">
+        <div class="range-slider" id="sp-alarm-active" data-val="30-50"></div>
+    </td>
+    <td class="close"><a href="javascript:"></a></td>
+</tr>
+<tr>
+    <td class="label">
+        <div>
+
+            <label class="label_check" for="line">
+                <input name="KPI" id="line" type="checkbox" />
+            </label>
+            Line Error Active
+            <span>(<span class="min"></span> - <span class="max"></span> )</span>
+        </div>
+    </td>
+    <td class="slider">
+        <div class="range-slider" id="sp-lea" data-val="20-70"></div>
+    </td>
+    <td class="close"><a href="javascript:"></a></td>
+</tr>
+<tr class="alt">
+    <td class="label">
+        <div>
+            <label class="label_check" for="alarm1">
+                <input name="KPI" id="alarm1" type="checkbox" />
+            </label>
+            Temp Badges created
+            <span>(<span class="min"></span> - <span class="max"></span> )</span>
+        </div>
+    </td>
+    <td class="slider">
+        <div class="range-slider" id="sp-tbc" data-val="30-50"></div>
+    </td>
+    <td class="close"><a href="javascript:"></a></td>
+</tr>
+<tr>
+    <td class="label">
+        <div>
+
+            <label class="label_check" for="all4">
+                <input name="KPI" id="all4" type="checkbox" />
+            </label>
+            Lost badges created
+            <span>(<span class="min"></span> - <span class="max"></span> )</span>
+        </div>
+    </td>
+    <td class="slider">
+        <div class="range-slider" id="sp-lbc" data-val="20-70"></div>
+    </td>
+    <td class="close"><a href="javascript:"></a></td>
+</tr>
+<tr class="alt">
+    <td class="label">
+        <div>
+            <label class="label_check" >
+                <input name="KPI"  type="checkbox" checked="checked" />
+            </label>
+            New badges created
+            <span>(<span class="min"></span> - <span class="max"></span> )</span>
+        </div>
+    </td>
+    <td class="slider">
+        <div class="range-slider" id="sp-nbc" data-val="30-50"></div>
+    </td>
+    <td class="close"><a href="javascript:"></a></td>
+</tr>
+<tr>
+    <td class="label">
+        <div>
+
+            <label class="label_check" for="held">
+                <input name="KPI" id="held" type="checkbox" />
+            </label>
+            NAK Errors
+            <span>(<span class="min"></span> - <span class="max"></span> )</span>
+        </div>
+    </td>
+    <td class="slider">
+        <div class="range-slider" data-val="20-70"></div>
+    </td>
+    <td class="close"><a href="javascript:"></a></td>
+</tr>
+<tr class="alt">
+    <td class="label">
+        <div>
+            <label class="label_check" for="alarm">
+                <input name="KPI" id="alarm" type="checkbox" />
+            </label>
+            FAILEDRPC Errors
+            <span>(<span class="min"></span> - <span class="max"></span> )</span>
+        </div>
+    </td>
+    <td class="slider">
+        <div class="range-slider" id="sp-faildrpc" data-val="30-50"></div>
+    </td>
+    <td class="close"><a href="javascript:"></a></td>
+</tr>
+<tr>
+    <td class="label">
+        <div>
+
+            <label class="label_check" for="line">
+                <input name="KPI" id="line" type="checkbox" />
+            </label>
+            Database Size
+            <span>(<span class="min"></span> - <span class="max"></span> )</span>
+        </div>
+    </td>
+    <td class="slider">
+        <div class="range-slider" id="sp-db-sz" data-val="20-70"></div>
+    </td>
+    <td class="close"><a href="javascript:"></a></td>
+</tr>
+<tr class="alt">
+    <td class="label">
+        <div>
+            <label class="label_check" for="alarm1">
+                <input name="KPI" id="alarm1" type="checkbox" />
+            </label>
+            OG  Application Server Memory
+            <span>(<span class="min"></span> - <span class="max"></span> )</span>
+        </div>
+    </td>
+    <td class="slider">
+        <div class="range-slider" id="sp-og-app" data-val="30-50"></div>
+    </td>
+    <td class="close"><a href="javascript:"></a></td>
+</tr>
+<tr>
+    <td class="label">
+        <div>
+
+            <label class="label_check" for="all4">
+                <input name="KPI" id="all4" type="checkbox" />
+            </label>
+            SQL server memory
+            <span>(<span class="min"></span> - <span class="max"></span> )</span>
+        </div>
+    </td>
+    <td class="slider">
+        <div class="range-slider" id="sp-sql-mem" data-val="20-70"></div>
+    </td>
+    <td class="close"><a href="javascript:"></a></td>
+</tr>
+<tr class="alt">
+    <td class="label">
+        <div>
+            <label class="label_check" >
+                <input name="KPI"  type="checkbox" checked="checked" />
+            </label>
+            OG Application server Lenel error log
+            <span>(<span class="min"></span> - <span class="max"></span> )</span>
+        </div>
+    </td>
+    <td class="slider">
+        <div class="range-slider" id="sp-og-app-err" data-val="30-50"></div>
+    </td>
+    <td class="close"><a href="javascript:"></a></td>
+</tr>
+<tr>
+    <td class="label">
+        <div>
+
+            <label class="label_check" for="held">
+                <input name="KPI" id="held" type="checkbox" />
+            </label>
+            DataConduIT error log growth
+            <span>(<span class="min"></span> - <span class="max"></span> )</span>
+        </div>
+    </td>
+    <td class="slider">
+        <div class="range-slider" id="sp-datacon" data-val="20-70"></div>
+    </td>
+    <td class="close"><a href="javascript:"></a></td>
+</tr>
+<tr class="alt">
+    <td class="label">
+        <div>
+            <label class="label_check" for="alarm">
+                <input name="KPI" id="alarm" type="checkbox" />
+            </label>
+            DataExchange error log growth
+            <span>(<span class="min"></span> - <span class="max"></span> )</span>
+        </div>
+    </td>
+    <td class="slider">
+        <div class="range-slider" id="sp-dataexch" data-val="30-50"></div>
+    </td>
+    <td class="close"><a href="javascript:"></a></td>
+</tr>
+<tr class="alt">
+    <td class="label">
+        <div>
+
+            <label class="label_check" for="line">
+                <input name="KPI" id="line" type="checkbox" />
+            </label>
+            Duration since last successful SQL database backup
+            <span>(<span class="min"></span> - <span class="max"></span> )</span>
+        </div>
+    </td>
+    <td class="slider">
+        <div class="range-slider" id="sp-duration" data-val="20-70"></div>
+    </td>
+    <td class="close"><a href="javascript:"></a></td>
+</tr>
+<tr class="alt">
+    <td class="label">
+        <div>
+            <label class="label_check" for="alarm1">
+                <input name="KPI" id="alarm1" type="checkbox" />
+            </label>
+            Duration since the last successful archive
+            <span>(<span class="min"></span> - <span class="max"></span> )</span>
+        </div>
+    </td>
+    <td class="slider">
+        <div class="range-slider" id="sp-duration-arch" data-val="30-50"></div>
+    </td>
+    <td class="close"><a href="javascript:"></a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Area utilization<i class="arrow"></i>
+    <a href="javascript:" class="btn mini-btn bt-add-area"><i class="add">&nbsp;</i></a>
+    <a href="javascript:" class="btn mini-btn edit">EDIT</a>
+    <a href="javascript:" class="btn mini-btn save">SAVE</a>
+</h3>
+<div>
+    <table>
+        <tbody>
+        <tr>
+            <td class="label">
+                <div>
+
+                    <label class="label_check" for="all4">
+                        <input name="KPI" id="all4" type="checkbox" />
+                    </label>
+                    Headquarters
+                    <span>(<span class="min"></span> - <span class="max"></span> )</span>
+                </div>
+            </td>
+            <td class="slider">
+                <div class="range-slider" id="sp-head" data-val="20-70"></div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+        <tr class="alt">
+            <td class="label">
+                <div>
+                    <label class="label_check" for="alarm1">
+                        <input name="KPI" id="alarm1" type="checkbox" />
+                    </label>
+                    Carrier
+                    <span>(<span class="min"></span> - <span class="max"></span> )</span>
+                </div>
+            </td>
+            <td class="slider">
+                <div class="range-slider" id="sp-carrier" data-val="30-50"></div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+        <tr>
+            <td class="label">
+                <div>
+
+                    <label class="label_check" for="all4">
+                        <input name="KPI" id="all4" type="checkbox" />
+                    </label>
+                    Secure Printing
+                    <span>(<span class="min"></span> - <span class="max"></span> )</span>
+                </div>
+            </td>
+            <td class="slider">
+                <div class="range-slider" id="sp-sp" data-val="20-70"></div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+        <tr class="alt">
+            <td class="label">
+                <div>
+                    <label class="label_check" for="alarm1">
+                        <input name="KPI" id="alarm1" type="checkbox" />
+                    </label>
+                    Linconlton
+                    <span>(<span class="min"></span> - <span class="max"></span> )</span>
+                </div>
+            </td>
+            <td class="slider">
+                <div class="range-slider" id="sp-lin" data-val="30-50"></div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+
+        </tbody>
+    </table>
+</div>
+</div>
+</div>
+
+<div class="view" id="areaUtilization">
+<div class="accordion">
+<h3>Area utilization<i class="arrow"></i>
+    <a href="javascript:" class="btn mini-btn edit">EDIT</a>
+    <a href="javascript:" class="btn mini-btn save">SAVE</a>
+</h3>
+<div>
+    <table>
+        <tbody>
+        <tr>
+            <td class="label">
+                <div>
+
+                    <label class="label_check" for="all4">
+                        <input name="KPI" id="all4" type="checkbox" />
+                    </label>
+                    Headquarters
+                    <span>(<span class="min"></span> - <span class="max"></span> )</span>
+                </div>
+            </td>
+            <td class="slider">
+                <div class="range-slider" id="sp-head" data-val="20-70"></div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+        <tr class="alt">
+            <td class="label">
+                <div>
+                    <label class="label_check" for="alarm1">
+                        <input name="KPI" id="alarm1" type="checkbox" />
+                    </label>
+                    Carrier
+                    <span>(<span class="min"></span> - <span class="max"></span> )</span>
+                </div>
+            </td>
+            <td class="slider">
+                <div class="range-slider" id="sp-carrier" data-val="30-50"></div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+        <tr>
+            <td class="label">
+                <div>
+
+                    <label class="label_check" for="all4">
+                        <input name="KPI" id="all4" type="checkbox" />
+                    </label>
+                    Secure Printing
+                    <span>(<span class="min"></span> - <span class="max"></span> )</span>
+                </div>
+            </td>
+            <td class="slider">
+                <div class="range-slider" id="sp-sp" data-val="20-70"></div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+        <tr class="alt">
+            <td class="label">
+                <div>
+                    <label class="label_check" for="alarm1">
+                        <input name="KPI" id="alarm1" type="checkbox" />
+                    </label>
+                    Linconlton
+                    <span>(<span class="min"></span> - <span class="max"></span> )</span>
+                </div>
+            </td>
+            <td class="slider">
+                <div class="range-slider" id="sp-lin" data-val="30-50"></div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+
+        </tbody>
+    </table>
+</div>
+<h3>Headquarters<i class="arrow"></i>
+    <a href="javascript:" class="btn mini-btn edit">EDIT</a>
+    <a href="javascript:" class="btn mini-btn save">SAVE</a>
+</h3>
+<div>
+    <table>
+        <tbody>
+        <tr>
+            <td class="label">
+                <div>
+                    <label class="label_check" >
+                        <input name="KPI"  type="checkbox" />
+                    </label>
+                    Front Lobby
+                    <span>(<span class="min"></span> - <span class="max"></span> )</span>
+                </div>
+            </td>
+            <td class="slider">
+                <div class="range-slider" id="au-fl" data-val="20-70"></div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+        <tr class="alt">
+            <td class="label">
+                <div>
+                    <label class="label_check" for="all5">
+                        <input name="KPI" id="all5" type="checkbox" />
+                    </label>
+                    Training Entrance
+                    <span>(<span class="min"></span> - <span class="max"></span> )</span>
+                </div>
+            </td>
+            <td class="slider">
+                <div class="range-slider" id="au-te" data-val="32-50"></div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+        <tr>
+            <td class="label">
+                <div>
+                    <label class="label_check" >
+                        <input name="KPI"  type="checkbox" />
+                    </label>
+                    Shipping Department
+                    <span>(<span class="min"></span> - <span class="max"></span> )</span>
+                </div>
+            </td>
+            <td class="slider">
+                <div class="range-slider" id="au-sd" data-val="20-70"></div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+        <tr class="alt">
+            <td class="label">
+                <div>
+                    <label class="label_check" for="all5">
+                        <input name="KPI" id="all5" type="checkbox" />
+                    </label>
+                    Services Entry
+                    <span>(<span class="min"></span> - <span class="max"></span> )</span>
+                </div>
+            </td>
+            <td class="slider">
+                <div class="range-slider" id="au-se" data-val="32-50"></div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<h3>Carrier <i class="arrow"></i>
+    <a href="javascript:" class="btn mini-btn edit">EDIT</a>
+    <a href="javascript:" class="btn mini-btn save">SAVE</a>
+</h3>
+<div>
+    <table>
+        <tbody>
+        <tr>
+            <td class="label">
+                <div>
+                    <label class="label_check" >
+                        <input name="KPI"  type="checkbox" />
+                    </label>
+                    Front Lobby
+                    <span>(<span class="min"></span> - <span class="max"></span> )</span>
+                </div>
+            </td>
+            <td class="slider">
+                <div class="range-slider" id="ca-fl" data-val="20-70"></div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+        <tr class="alt">
+            <td class="label">
+                <div>
+                    <label class="label_check" for="all5">
+                        <input name="KPI" id="all5" type="checkbox" />
+                    </label>
+                    Training Entrance
+                    <span>(<span class="min"></span> - <span class="max"></span> )</span>
+                </div>
+            </td>
+            <td class="slider">
+                <div class="range-slider" id="ca-te" data-val="32-50"></div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+        <tr>
+            <td class="label">
+                <div>
+                    <label class="label_check" >
+                        <input name="KPI"  type="checkbox" />
+                    </label>
+                    Shipping Department
+                    <span>(<span class="min"></span> - <span class="max"></span> )</span>
+                </div>
+            </td>
+            <td class="slider">
+                <div class="range-slider" id="au-sd" data-val="20-70"></div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+        <tr class="alt">
+            <td class="label">
+                <div>
+                    <label class="label_check" for="all5">
+                        <input name="KPI" id="all5" type="checkbox" />
+                    </label>
+                    Services Entry
+                    <span>(<span class="min"></span> - <span class="max"></span> )</span>
+                </div>
+            </td>
+            <td class="slider">
+                <div class="range-slider" id="ca-se" data-val="32-50"></div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<h3>Secure printing<i class="arrow"></i>
+    <a href="javascript:" class="btn mini-btn edit">EDIT</a>
+    <a href="javascript:" class="btn mini-btn save">SAVE</a>
+</h3>
+<div>
+    <table>
+        <tbody>
+        <tr>
+            <td class="label">
+                <div>
+                    <label class="label_check" >
+                        <input name="KPI"  type="checkbox" />
+                    </label>
+                    Front Lobby
+                    <span>(<span class="min"></span> - <span class="max"></span> )</span>
+                </div>
+            </td>
+            <td class="slider">
+                <div class="range-slider" id="sc-fl" data-val="20-70"></div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+        <tr class="alt">
+            <td class="label">
+                <div>
+                    <label class="label_check" for="all5">
+                        <input name="KPI" id="all5" type="checkbox" />
+                    </label>
+                    Training Entrance
+                    <span>(<span class="min"></span> - <span class="max"></span> )</span>
+                </div>
+            </td>
+            <td class="slider">
+                <div class="range-slider" id="sc-te" data-val="32-50"></div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+        <tr>
+            <td class="label">
+                <div>
+                    <label class="label_check" >
+                        <input name="KPI"  type="checkbox" />
+                    </label>
+                    Shipping Department
+                    <span>(<span class="min"></span> - <span class="max"></span> )</span>
+                </div>
+            </td>
+            <td class="slider">
+                <div class="range-slider" id="sc-sd" data-val="20-70"></div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+        <tr class="alt">
+            <td class="label">
+                <div>
+                    <label class="label_check" for="all5">
+                        <input name="KPI" id="all5" type="checkbox" />
+                    </label>
+                    Services Entry
+                    <span>(<span class="min"></span> - <span class="max"></span> )</span>
+                </div>
+            </td>
+            <td class="slider">
+                <div class="range-slider" id="sc-se" data-val="32-50"></div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<h3>Lincolnton <i class="arrow"></i>
+    <a href="javascript:" class="btn mini-btn edit">EDIT</a>
+    <a href="javascript:" class="btn mini-btn save">SAVE</a>
+</h3>
+<div>
+    <table>
+        <tbody>
+        <tr>
+            <td class="label">
+                <div>
+                    <label class="label_check" >
+                        <input name="KPI"  type="checkbox" />
+                    </label>
+                    Front Lobby
+                    <span>(<span class="min"></span> - <span class="max"></span> )</span>
+                </div>
+            </td>
+            <td class="slider">
+                <div class="range-slider" id="lc-fl" data-val="20-70"></div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+        <tr class="alt">
+            <td class="label">
+                <div>
+                    <label class="label_check" for="all5">
+                        <input name="KPI" id="all5" type="checkbox" />
+                    </label>
+                    Training Entrance
+                    <span>(<span class="min"></span> - <span class="max"></span> )</span>
+                </div>
+            </td>
+            <td class="slider">
+                <div class="range-slider" id="lc-te" data-val="32-50"></div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+        <tr>
+            <td class="label">
+                <div>
+                    <label class="label_check" >
+                        <input name="KPI"  type="checkbox" />
+                    </label>
+                    Shipping Department
+                    <span>(<span class="min"></span> - <span class="max"></span> )</span>
+                </div>
+            </td>
+            <td class="slider">
+                <div class="range-slider" id="lc-sd" data-val="20-70"></div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+        <tr class="alt">
+            <td class="label">
+                <div>
+                    <label class="label_check" for="all5">
+                        <input name="KPI" id="all5" type="checkbox" />
+                    </label>
+                    Services Entry
+                    <span>(<span class="min"></span> - <span class="max"></span> )</span>
+                </div>
+            </td>
+            <td class="slider">
+                <div class="range-slider" id="lc-se" data-val="32-50"></div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+</div>
+</div>
+<div class="view" id="onGuardServer">
+<div class="accordion">
+<h3>System performance<i class="arrow"></i>
+    <a href="javascript:" class="btn mini-btn edit">EDIT</a>
+    <a href="javascript:" class="btn mini-btn save">SAVE</a>
+</h3>
+<div>
+    <table>
+        <tbody>
+        <tr>
+            <td class="label">
+                <div>
+                    <label class="label_check" >
+                        <input name="KPI"  type="checkbox" />
+                    </label>
+                    CPU
+                    <span>(<span class="min"></span> - <span class="max"></span> )</span>
+                </div>
+            </td>
+            <td class="slider">
+                <div class="range-slider" id="sp-cpu" data-val="20-70"></div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+        <tr class="alt">
+            <td class="label">
+                <div>
+                    <label class="label_check" for="all5">
+                        <input name="KPI" id="all5" type="checkbox" />
+                    </label>
+                    Memory
+                    <span>(<span class="min"></span> - <span class="max"></span> )</span>
+                </div>
+            </td>
+            <td class="slider">
+                <div class="range-slider" id="sp-memory" data-val="32-50"></div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+        <tr>
+            <td class="label">
+                <div>
+                    <label class="label_check" >
+                        <input name="KPI"  type="checkbox" />
+                    </label>
+                    HD
+                    <span>(<span class="min"></span> - <span class="max"></span> )</span>
+                </div>
+            </td>
+            <td class="slider">
+                <div class="range-slider" id="sp-hd" data-val="20-70"></div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+        <tr class="alt">
+            <td class="label">
+                <div>
+                    <label class="label_check" for="all5">
+                        <input name="KPI" id="all5" type="checkbox" />
+                    </label>
+                    Processor
+                    <span>(<span class="min"></span> - <span class="max"></span> )</span>
+                </div>
+            </td>
+            <td class="slider">
+                <div class="range-slider" id="sp-processor" data-val="32-50"></div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+        <tr>
+            <td class="label">
+                <div>
+                    <label class="label_check" >
+                        <input name="KPI"  type="checkbox" />
+                    </label>
+                    Network Usage
+                    <span>(<span class="min"></span> - <span class="max"></span> )</span>
+                </div>
+            </td>
+            <td class="slider">
+                <div class="range-slider" id="sp-peak-usage" data-val="20-70"></div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- OnGuard Alarm -->
+<h3> OnGuard alarm <i class="arrow"></i>
+    <a href="javascript:" class="btn mini-btn edit">EDIT</a>
+    <a href="javascript:" class="btn mini-btn save">SAVE</a>
+</h3>
+<div>
+    <table>
+        <tbody>
+        <tr>
+            <td class="label">
+                <div>
+
+                    <label class="label_check" for="all4">
+                        <input name="KPI" id="all4" type="checkbox" />
+                    </label>
+                    Access Granted
+                    <span>(<span class="min"></span> - <span class="max"></span> )</span>
+                </div>
+            </td>
+            <td class="slider">
+                <div class="range-slider" id="sp-all-events" data-val="20-70"></div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+        <tr class="alt">
+            <td class="label">
+                <div>
+                    <label class="label_check" >
+                        <input name="KPI"  type="checkbox" checked="checked" />
+                    </label>
+                    Invalid Pin
+                    <span>(<span class="min"></span> - <span class="max"></span> )</span>
+                </div>
+            </td>
+            <td class="slider">
+                <div class="range-slider" id="sp-dfo" data-val="30-50"></div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+        <tr >
+            <td class="label">
+                <div>
+                    <label class="label_check" >
+                        <input name="KPI"  type="checkbox" checked="checked" />
+                    </label>
+                    Door Forced Open
+                    <span>(<span class="min"></span> - <span class="max"></span> )</span>
+                </div>
+            </td>
+            <td class="slider">
+                <div class="range-slider" id="sp-dfo" data-val="30-50"></div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+
+
+        <tr class="alt">
+            <td class="label">
+                <div>
+                    <label class="label_check" >
+                        <input name="KPI"  type="checkbox" checked="checked" />
+                    </label>
+                    Door Held Open
+                    <span>(<span class="min"></span> - <span class="max"></span> )</span>
+                </div>
+            </td>
+            <td class="slider">
+                <div class="range-slider" id="sp-dfo" data-val="30-50"></div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+
+
+        </tbody>
+    </table>
+</div>
+<!-- OnGuard Alarm End -->
+
+
+
+
+<!-- Counters -->
+<h3>  New badges created counter <i class="arrow"></i>
+    <a href="javascript:" class="btn mini-btn edit">EDIT</a>
+    <a href="javascript:" class="btn mini-btn save">SAVE</a>
+</h3>
+<div>
+    <table>
+        <tbody>
+        <tr>
+            <td class="label">
+                <div>
+
+                    <label class="label_check" for="all4">
+                        <input name="KPI" id="all4" type="checkbox" />
+                    </label>
+                    New Badges Created Counter
+                    <span>(<span class="min"></span> - <span class="max"></span> )</span>
+                </div>
+            </td>
+            <td class="slider">
+                <div class="range-slider" id="sp-all-events" data-val="20-70"></div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+
+
+
+        </tbody>
+    </table>
+</div>
+<!--Counter End -->
+
+
+
+<!-- Counters -->
+<h3>  Archive counter <i class="arrow"></i>
+    <a href="javascript:" class="btn mini-btn edit">EDIT</a>
+    <a href="javascript:" class="btn mini-btn save">SAVE</a>
+</h3>
+<div>
+    <table>
+        <tbody>
+        <tr>
+            <td class="label">
+                <div>
+
+                    <label class="label_check" for="all4">
+                        <input name="KPI" id="all4" type="checkbox" />
+                    </label>
+                    Archive Counter
+                    <span>(<span class="min"></span> - <span class="max"></span> )</span>
+                </div>
+            </td>
+            <td class="slider">
+                <div class="range-slider" id="ac-ac" data-val="10-60"></div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+
+
+
+        </tbody>
+    </table>
+</div>
+<!--Counter End -->
+
+<!-- OnGuard Credential -->
+<h3> OnGuard credentials <i class="arrow"></i>
+    <a href="javascript:" class="btn mini-btn edit">EDIT</a>
+    <a href="javascript:" class="btn mini-btn save">SAVE</a>
+</h3>
+<div>
+    <table>
+        <tbody>
+        <tr>
+            <td class="label">
+                <div>
+
+                    <label class="label_check" for="all4">
+                        <input name="KPI" id="all4" type="checkbox" />
+                    </label>
+                    Finance
+                    <span>(<span class="min"></span> - <span class="max"></span> )</span>
+                </div>
+            </td>
+            <td class="slider">
+                <div class="range-slider" id="oc-fi" data-val="20-70"></div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+        <tr class="alt">
+            <td class="label">
+                <div>
+                    <label class="label_check" >
+                        <input name="KPI"  type="checkbox" checked="checked" />
+                    </label>
+                    Employee
+                    <span>(<span class="min"></span> - <span class="max"></span> )</span>
+                </div>
+            </td>
+            <td class="slider">
+                <div class="range-slider" id="oc-em" data-val="30-50"></div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+        <tr >
+            <td class="label">
+                <div>
+                    <label class="label_check" >
+                        <input name="KPI"  type="checkbox" checked="checked" />
+                    </label>
+                    Contractor
+                    <span>(<span class="min"></span> - <span class="max"></span> )</span>
+                </div>
+            </td>
+            <td class="slider">
+                <div class="range-slider" id="oc-co" data-val="30-50"></div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+
+
+        <tr class="alt">
+            <td class="label">
+                <div>
+                    <label class="label_check" >
+                        <input name="KPI"  type="checkbox" checked="checked" />
+                    </label>
+                    Engineering
+                    <span>(<span class="min"></span> - <span class="max"></span> )</span>
+                </div>
+            </td>
+            <td class="slider">
+                <div class="range-slider" id="oc-en" data-val="30-50"></div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+
+        <tr>
+            <td class="label">
+                <div>
+                    <label class="label_check" >
+                        <input name="KPI"  type="checkbox" checked="checked" />
+                    </label>
+                    IT
+                    <span>(<span class="min"></span> - <span class="max"></span> )</span>
+                </div>
+            </td>
+            <td class="slider">
+                <div class="range-slider" id="oc-it" data-val="30-50"></div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+
+        <tr class="alt">
+            <td class="label">
+                <div>
+                    <label class="label_check" >
+                        <input name="KPI"  type="checkbox" checked="checked" />
+                    </label>
+                    Temp
+                    <span>(<span class="min"></span> - <span class="max"></span> )</span>
+                </div>
+            </td>
+            <td class="slider">
+                <div class="range-slider" id="oc-te" data-val="30-50"></div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+
+
+        </tbody>
+    </table>
+</div>
+<!-- OnGuard Alarm End -->
+
+<!-- OnGuard Credential -->
+<h3> Service monitor <i class="arrow"></i>
+    <a href="javascript:" class="btn mini-btn edit">EDIT</a>
+    <a href="javascript:" class="btn mini-btn save">SAVE</a>
+</h3>
+<div>
+<h4> LS Linkage Server </h4>
+<table>
+    <tbody>
+    <tr>
+        <td class="label">
+            <div>
+
+                <label class="label_check" for="all4">
+                    <input name="KPI" id="all4" type="checkbox" />
+                </label>
+                CPU
+                <span>(<span class="min"></span> - <span class="max"></span> )</span>
+            </div>
+        </td>
+        <td class="slider">
+            <div class="range-slider" id="li-cp" data-val="20-70"></div>
+        </td>
+        <td class="close"><a href="javascript:"></a></td>
+    </tr>
+    <tr class="alt">
+        <td class="label">
+            <div>
+                <label class="label_check" >
+                    <input name="KPI"  type="checkbox" checked="checked" />
+                </label>
+                Memory
+                <span>(<span class="min"></span> - <span class="max"></span> )</span>
+            </div>
+        </td>
+        <td class="slider">
+            <div class="range-slider" id="li-me" data-val="30-50"></div>
+        </td>
+        <td class="close"><a href="javascript:"></a></td>
+    </tr>
+    <tr >
+        <td class="label">
+            <div>
+                <label class="label_check" >
+                    <input name="KPI"  type="checkbox" checked="checked" />
+                </label>
+                Crashes
+                <span>(<span class="min"></span> - <span class="max"></span> )</span>
+            </div>
+        </td>
+        <td class="slider">
+            <div class="range-slider" id="ls-cr" data-val="30-50"></div>
+        </td>
+        <td class="close"><a href="javascript:"></a></td>
+    </tr>
+
+
+    </tbody>
+</table>
+
+<h4> LS Communication Server </h4>
+<table>
+    <tbody>
+    <tr>
+        <td class="label">
+            <div>
+
+                <label class="label_check" for="all4">
+                    <input name="KPI" id="all4" type="checkbox" />
+                </label>
+                CPU
+                <span>(<span class="min"></span> - <span class="max"></span> )</span>
+            </div>
+        </td>
+        <td class="slider">
+            <div class="range-slider" id="li-cp" data-val="20-70"></div>
+        </td>
+        <td class="close"><a href="javascript:"></a></td>
+    </tr>
+    <tr class="alt">
+        <td class="label">
+            <div>
+                <label class="label_check" >
+                    <input name="KPI"  type="checkbox" checked="checked" />
+                </label>
+                Memory
+                <span>(<span class="min"></span> - <span class="max"></span> )</span>
+            </div>
+        </td>
+        <td class="slider">
+            <div class="range-slider" id="li-me" data-val="30-50"></div>
+        </td>
+        <td class="close"><a href="javascript:"></a></td>
+    </tr>
+    <tr >
+        <td class="label">
+            <div>
+                <label class="label_check" >
+                    <input name="KPI"  type="checkbox" checked="checked" />
+                </label>
+                Crashes
+                <span>(<span class="min"></span> - <span class="max"></span> )</span>
+            </div>
+        </td>
+        <td class="slider">
+            <div class="range-slider" id="ls-cr" data-val="30-50"></div>
+        </td>
+        <td class="close"><a href="javascript:"></a></td>
+    </tr>
+
+
+    </tbody>
+</table>
+
+<h4> Login Driver </h4>
+<table>
+    <tbody>
+    <tr>
+        <td class="label">
+            <div>
+
+                <label class="label_check" for="all4">
+                    <input name="KPI" id="all4" type="checkbox" />
+                </label>
+                CPU
+                <span>(<span class="min"></span> - <span class="max"></span> )</span>
+            </div>
+        </td>
+        <td class="slider">
+            <div class="range-slider" id="li-cp" data-val="20-70"></div>
+        </td>
+        <td class="close"><a href="javascript:"></a></td>
+    </tr>
+    <tr class="alt">
+        <td class="label">
+            <div>
+                <label class="label_check" >
+                    <input name="KPI"  type="checkbox" checked="checked" />
+                </label>
+                Memory
+                <span>(<span class="min"></span> - <span class="max"></span> )</span>
+            </div>
+        </td>
+        <td class="slider">
+            <div class="range-slider" id="li-me" data-val="30-50"></div>
+        </td>
+        <td class="close"><a href="javascript:"></a></td>
+    </tr>
+    <tr >
+        <td class="label">
+            <div>
+                <label class="label_check" >
+                    <input name="KPI"  type="checkbox" checked="checked" />
+                </label>
+                Crashes
+                <span>(<span class="min"></span> - <span class="max"></span> )</span>
+            </div>
+        </td>
+        <td class="slider">
+            <div class="range-slider" id="ls-cr" data-val="30-50"></div>
+        </td>
+        <td class="close"><a href="javascript:"></a></td>
+    </tr>
+
+
+    </tbody>
+</table>
+
+<h4>LS Replicator Service </h4>
+<table>
+    <tbody>
+    <tr>
+        <td class="label">
+            <div>
+
+                <label class="label_check" for="all4">
+                    <input name="KPI" id="all4" type="checkbox" />
+                </label>
+                CPU
+                <span>(<span class="min"></span> - <span class="max"></span> )</span>
+            </div>
+        </td>
+        <td class="slider">
+            <div class="range-slider" id="li-cp" data-val="20-70"></div>
+        </td>
+        <td class="close"><a href="javascript:"></a></td>
+    </tr>
+    <tr class="alt">
+        <td class="label">
+            <div>
+                <label class="label_check" >
+                    <input name="KPI"  type="checkbox" checked="checked" />
+                </label>
+                Memory
+                <span>(<span class="min"></span> - <span class="max"></span> )</span>
+            </div>
+        </td>
+        <td class="slider">
+            <div class="range-slider" id="li-me" data-val="30-50"></div>
+        </td>
+        <td class="close"><a href="javascript:"></a></td>
+    </tr>
+    <tr >
+        <td class="label">
+            <div>
+                <label class="label_check" >
+                    <input name="KPI"  type="checkbox" checked="checked" />
+                </label>
+                Crashes
+                <span>(<span class="min"></span> - <span class="max"></span> )</span>
+            </div>
+        </td>
+        <td class="slider">
+            <div class="range-slider" id="ls-cr" data-val="30-50"></div>
+        </td>
+        <td class="close"><a href="javascript:"></a></td>
+    </tr>
+
+
+    </tbody>
+</table>
+
+
+<h4>LS Video Service</h4>
+<table>
+    <tbody>
+    <tr>
+        <td class="label">
+            <div>
+
+                <label class="label_check" for="all4">
+                    <input name="KPI" id="all4" type="checkbox" />
+                </label>
+                CPU
+                <span>(<span class="min"></span> - <span class="max"></span> )</span>
+            </div>
+        </td>
+        <td class="slider">
+            <div class="range-slider" id="li-cp" data-val="20-70"></div>
+        </td>
+        <td class="close"><a href="javascript:"></a></td>
+    </tr>
+    <tr class="alt">
+        <td class="label">
+            <div>
+                <label class="label_check" >
+                    <input name="KPI"  type="checkbox" checked="checked" />
+                </label>
+                Memory
+                <span>(<span class="min"></span> - <span class="max"></span> )</span>
+            </div>
+        </td>
+        <td class="slider">
+            <div class="range-slider" id="li-me" data-val="30-50"></div>
+        </td>
+        <td class="close"><a href="javascript:"></a></td>
+    </tr>
+    <tr >
+        <td class="label">
+            <div>
+                <label class="label_check" >
+                    <input name="KPI"  type="checkbox" checked="checked" />
+                </label>
+                Crashes
+                <span>(<span class="min"></span> - <span class="max"></span> )</span>
+            </div>
+        </td>
+        <td class="slider">
+            <div class="range-slider" id="ls-cr" data-val="30-50"></div>
+        </td>
+        <td class="close"><a href="javascript:"></a></td>
+    </tr>
+
+
+    </tbody>
+</table>
+
+<h4>LS DataExchange Service</h4>
+<table>
+    <tbody>
+    <tr>
+        <td class="label">
+            <div>
+
+                <label class="label_check" for="all4">
+                    <input name="KPI" id="all4" type="checkbox" />
+                </label>
+                CPU
+                <span>(<span class="min"></span> - <span class="max"></span> )</span>
+            </div>
+        </td>
+        <td class="slider">
+            <div class="range-slider" id="li-cp" data-val="20-70"></div>
+        </td>
+        <td class="close"><a href="javascript:"></a></td>
+    </tr>
+    <tr class="alt">
+        <td class="label">
+            <div>
+                <label class="label_check" >
+                    <input name="KPI"  type="checkbox" checked="checked" />
+                </label>
+                Memory
+                <span>(<span class="min"></span> - <span class="max"></span> )</span>
+            </div>
+        </td>
+        <td class="slider">
+            <div class="range-slider" id="li-me" data-val="30-50"></div>
+        </td>
+        <td class="close"><a href="javascript:"></a></td>
+    </tr>
+    <tr >
+        <td class="label">
+            <div>
+                <label class="label_check" >
+                    <input name="KPI"  type="checkbox" checked="checked" />
+                </label>
+                Crashes
+                <span>(<span class="min"></span> - <span class="max"></span> )</span>
+            </div>
+        </td>
+        <td class="slider">
+            <div class="range-slider" id="ls-cr" data-val="30-50"></div>
+        </td>
+        <td class="close"><a href="javascript:"></a></td>
+    </tr>
+
+
+    </tbody>
+</table>
+
+</div>
+<!-- OnGuard Alarm End -->
+
+
+<!-- Counters -->
+<h3>  Error log monitor <i class="arrow"></i>
+    <a href="javascript:" class="btn mini-btn btn-add-error"><i class="add">&nbsp;</i></a>
+    <a href="javascript:" class="btn mini-btn edit">EDIT</a>
+    <a href="javascript:" class="btn mini-btn save">SAVE</a>
+</h3>
+<div>
+    <table class="tbl-error-log" style="width:99%;">
+        <tbody>
+        <tr class="e-labels">
+            <td class="e-name">
+                <div>Error Name
+                </div>
+            </td>
+            <td class="e-date">
+                <div>Date Created</div>
+            </td>
+            <td class="e-memory">
+                <div>Memory</div>
+            </td>
+            <td class="e-status">
+                <div>Status</div>
+            </td>
+            <td class="e-close"></td>
+        </tr>
+        <tr>
+            <td class="label e-name">
+                <div>
+                    <label class="label_check" >
+                        <input name="KPI"  type="checkbox" />
+                    </label>
+                    Lorem Ipsum Error Name
+                </div>
+            </td>
+            <td class="label">
+                <div>24-09-2014 09:00:25</div>
+            </td>
+            <td class="label">
+                <div>14.5 M</div>
+            </td>
+            <td class="label">
+                <div>Active</div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+        <tr>
+            <td class="label e-name">
+                <div>
+                    <label class="label_check" >
+                        <input name="KPI"  type="checkbox" />
+                    </label>
+                    Lorem Ipsum Error Name
+                </div>
+            </td>
+            <td class="label">
+                <div>24-09-2014 09:00:25</div>
+            </td>
+            <td class="label">
+                <div>14.5 M</div>
+            </td>
+            <td class="label">
+                <div>Active</div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+        <tr>
+            <td class="label e-name">
+                <div>
+                    <label class="label_check" >
+                        <input name="KPI"  type="checkbox" />
+                    </label>
+                    Lorem Ipsum Error Name
+                </div>
+            </td>
+            <td class="label">
+                <div>24-09-2014 09:00:25</div>
+            </td>
+            <td class="label">
+                <div>14.5 M</div>
+            </td>
+            <td class="label">
+                <div>Active</div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+        <tr>
+            <td class="label e-name">
+                <div>
+                    <label class="label_check" >
+                        <input name="KPI"  type="checkbox" />
+                    </label>
+                    Lorem Ipsum Error Name
+                </div>
+            </td>
+            <td class="label">
+                <div>24-09-2014 09:00:25</div>
+            </td>
+            <td class="label">
+                <div>14.5 M</div>
+            </td>
+            <td class="label">
+                <div>Active</div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+        <tr>
+            <td class="label e-name">
+                <div>
+                    <label class="label_check" >
+                        <input name="KPI"  type="checkbox" />
+                    </label>
+                    Lorem Ipsum Error Name
+                </div>
+            </td>
+            <td class="label">
+                <div>24-09-2014 09:00:25</div>
+            </td>
+            <td class="label">
+                <div>14.5 M</div>
+            </td>
+            <td class="label">
+                <div>Active</div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+        <tr>
+            <td class="label e-name">
+                <div>
+                    <label class="label_check" >
+                        <input name="KPI"  type="checkbox" />
+                    </label>
+                    Lorem Ipsum Error Name
+                </div>
+            </td>
+            <td class="label">
+                <div>24-09-2014 09:00:25</div>
+            </td>
+            <td class="label">
+                <div>14.5 M</div>
+            </td>
+            <td class="label">
+                <div>Active</div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+        <tr>
+            <td class="label e-name">
+                <div>
+                    <label class="label_check" >
+                        <input name="KPI"  type="checkbox" />
+                    </label>
+                    Lorem Ipsum Error Name
+                </div>
+            </td>
+            <td class="label">
+                <div>24-09-2014 09:00:25</div>
+            </td>
+            <td class="label">
+                <div>14.5 M</div>
+            </td>
+            <td class="label">
+                <div>Active</div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+        <tr>
+            <td class="label e-name">
+                <div>
+                    <label class="label_check" >
+                        <input name="KPI"  type="checkbox" />
+                    </label>
+                    Lorem Ipsum Error Name
+                </div>
+            </td>
+            <td class="label">
+                <div>24-09-2014 09:00:25</div>
+            </td>
+            <td class="label">
+                <div>14.5 M</div>
+            </td>
+            <td class="label">
+                <div>Active</div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<!--Counter End -->
+
+</div>
+</div>
+<div class="view" id="databaseServer">
+<div class="accordion">
+<h3>System performance<i class="arrow"></i>
+    <a href="javascript:" class="btn mini-btn edit">EDIT</a>
+    <a href="javascript:" class="btn mini-btn save">SAVE</a>
+</h3>
+<div>
+    <table>
+        <tbody>
+        <tr>
+            <td class="label">
+                <div>
+                    <label class="label_check" >
+                        <input name="KPI"  type="checkbox" />
+                    </label>
+                    CPU
+                    <span>(<span class="min"></span> - <span class="max"></span> )</span>
+                </div>
+            </td>
+            <td class="slider">
+                <div class="range-slider" id="sp-cpu" data-val="20-70"></div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+        <tr class="alt">
+            <td class="label">
+                <div>
+                    <label class="label_check" for="all5">
+                        <input name="KPI" id="all5" type="checkbox" />
+                    </label>
+                    Memory
+                    <span>(<span class="min"></span> - <span class="max"></span> )</span>
+                </div>
+            </td>
+            <td class="slider">
+                <div class="range-slider" id="sp-memory" data-val="32-50"></div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+        <tr>
+            <td class="label">
+                <div>
+                    <label class="label_check" >
+                        <input name="KPI"  type="checkbox" />
+                    </label>
+                    HD
+                    <span>(<span class="min"></span> - <span class="max"></span> )</span>
+                </div>
+            </td>
+            <td class="slider">
+                <div class="range-slider" id="sp-hd" data-val="20-70"></div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+        <tr class="alt">
+            <td class="label">
+                <div>
+                    <label class="label_check" for="all5">
+                        <input name="KPI" id="all5" type="checkbox" />
+                    </label>
+                    Processor
+                    <span>(<span class="min"></span> - <span class="max"></span> )</span>
+                </div>
+            </td>
+            <td class="slider">
+                <div class="range-slider" id="sp-processor" data-val="32-50"></div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+        <tr>
+            <td class="label">
+                <div>
+                    <label class="label_check" >
+                        <input name="KPI"  type="checkbox" />
+                    </label>
+                    Network Usage
+                    <span>(<span class="min"></span> - <span class="max"></span> )</span>
+                </div>
+            </td>
+            <td class="slider">
+                <div class="range-slider" id="sp-peak-usage" data-val="20-70"></div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<h3>SQL server transactions <i class="arrow"></i>
+    <a href="javascript:" class="btn mini-btn edit">EDIT</a>
+    <a href="javascript:" class="btn mini-btn save">SAVE</a>
+</h3>
+<div>
+    <table>
+        <tbody>
+        <tr>
+            <td class="label">
+                <div>
+                    <label class="label_check" >
+                        <input name="KPI"  type="checkbox" />
+                    </label>
+                    TBD
+                    <span>(<span class="min"></span> - <span class="max"></span> )</span>
+                </div>
+            </td>
+            <td class="slider">
+                <div class="range-slider" data-val="20-65"></div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+
+        </tbody>
+    </table>
+</div>
+
+<h3>Database service monitor  <i class="arrow"></i>
+    <a href="javascript:" class="btn mini-btn edit">EDIT</a>
+    <a href="javascript:" class="btn mini-btn save">SAVE</a>
+</h3>
+<div>
+    <table>
+        <tbody>
+        <tr>
+            <td class="label">
+                <div>
+                    <label class="label_check" >
+                        <input name="KPI"  type="checkbox" />
+                    </label>
+                    TBD
+                    <span>(<span class="min"></span> - <span class="max"></span> )</span>
+                </div>
+            </td>
+            <td class="slider">
+                <div class="range-slider" data-val="20-65"></div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+
+        </tbody>
+    </table>
+</div>
+
+<h3>Database log monitor <i class="arrow"></i>
+    <a href="javascript:" class="btn mini-btn edit">EDIT</a>
+    <a href="javascript:" class="btn mini-btn save">SAVE</a>
+</h3>
+<div>
+    <table>
+        <tbody>
+        <tr>
+            <td class="label">
+                <div>
+                    <label class="label_check" >
+                        <input name="KPI"  type="checkbox" />
+                    </label>
+                    TBD
+                    <span>(<span class="min"></span> - <span class="max"></span> )</span>
+                </div>
+            </td>
+            <td class="slider">
+                <div class="range-slider" data-val="20-65"></div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+
+        </tbody>
+    </table>
+</div>
+
+<h3>Database size growth  <i class="arrow"></i>
+    <a href="javascript:" class="btn mini-btn edit">EDIT</a>
+    <a href="javascript:" class="btn mini-btn save">SAVE</a>
+</h3>
+<div>
+    <table>
+        <tbody>
+        <tr>
+            <td class="label">
+                <div>
+                    <label class="label_check" >
+                        <input name="KPI"  type="checkbox" />
+                    </label>
+                    TBD
+                    <span>(<span class="min"></span> - <span class="max"></span> )</span>
+                </div>
+            </td>
+            <td class="slider">
+                <div class="range-slider" data-val="20-65"></div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+
+        </tbody>
+    </table>
+</div>
+
+<h3>Database backup<i class="arrow"></i>
+    <a href="javascript:" class="btn mini-btn"><i class="add">&nbsp;</i></a>
+    <a href="javascript:" class="btn mini-btn edit">EDIT</a>
+    <a href="javascript:" class="btn mini-btn save">SAVE</a>
+</h3>
+<div>
+    <table>
+        <tbody>
+        <tr>
+            <td class="label">
+                <div>
+                    <label class="label_check" >
+                        <input name="KPI"  type="checkbox" />
+                    </label>
+                    TBD
+                    <span>(<span class="min"></span> - <span class="max"></span> )</span>
+                </div>
+            </td>
+            <td class="slider">
+                <div class="range-slider" data-val="20-65"></div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+
+        </tbody>
+    </table>
+</div>
+
+<!-- OnGuard Credential -->
+<h3> SQL server performance monitor  <i class="arrow"></i>
+    <a href="javascript:" class="btn mini-btn edit">EDIT</a>
+    <a href="javascript:" class="btn mini-btn save">SAVE</a>
+</h3>
+<div>
+    <h4> Connection </h4>
+    <table>
+        <tbody>
+        <tr>
+            <td class="label">
+                <div>
+
+                    <label class="label_check" for="all4">
+                        <input name="KPI" id="all4" type="checkbox" />
+                    </label>
+                    TBD
+                    <span>(<span class="min"></span> - <span class="max"></span> )</span>
+                </div>
+            </td>
+            <td class="slider">
+                <div class="range-slider" id="li-cp" data-val="20-70"></div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+
+
+        </tbody>
+    </table>
+
+    <h4>Size </h4>
+    <table>
+        <tbody>
+        <tr>
+            <td class="label">
+                <div>
+
+                    <label class="label_check" for="all4">
+                        <input name="KPI" id="all4" type="checkbox" />
+                    </label>
+                    TBD
+                    <span>(<span class="min"></span> - <span class="max"></span> )</span>
+                </div>
+            </td>
+            <td class="slider">
+                <div class="range-slider" id="li-cp" data-val="20-70"></div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+
+
+        </tbody>
+    </table>
+
+    <h4> Lock Wait Time </h4>
+    <table>
+        <tbody>
+        <tr>
+            <td class="label">
+                <div>
+
+                    <label class="label_check" for="all4">
+                        <input name="KPI" id="all4" type="checkbox" />
+                    </label>
+                    TBD
+                    <span>(<span class="min"></span> - <span class="max"></span> )</span>
+                </div>
+            </td>
+            <td class="slider">
+                <div class="range-slider" id="li-cp" data-val="20-70"></div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+
+
+
+        </tbody>
+    </table>
+
+</div>
+<!-- OnGuard Alarm End -->
+
+</div>
+</div>
+<div class="view" id="communicationServer">
+<div class="accordion">
+<h3>System performance<i class="arrow"></i>
+    <a href="javascript:" class="btn mini-btn edit">EDIT</a>
+    <a href="javascript:" class="btn mini-btn save">SAVE</a>
+</h3>
+<div>
+    <table>
+        <tbody>
+        <tr>
+            <td class="label">
+                <div>
+                    <label class="label_check" >
+                        <input name="KPI"  type="checkbox" />
+                    </label>
+                    CPU
+                    <span>(<span class="min"></span> - <span class="max"></span> )</span>
+                </div>
+            </td>
+            <td class="slider">
+                <div class="range-slider" id="sp-cpu" data-val="20-70"></div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+        <tr class="alt">
+            <td class="label">
+                <div>
+                    <label class="label_check" for="all5">
+                        <input name="KPI" id="all5" type="checkbox" />
+                    </label>
+                    Memory
+                    <span>(<span class="min"></span> - <span class="max"></span> )</span>
+                </div>
+            </td>
+            <td class="slider">
+                <div class="range-slider" id="sp-memory" data-val="32-50"></div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+        <tr>
+            <td class="label">
+                <div>
+                    <label class="label_check" >
+                        <input name="KPI"  type="checkbox" />
+                    </label>
+                    HD
+                    <span>(<span class="min"></span> - <span class="max"></span> )</span>
+                </div>
+            </td>
+            <td class="slider">
+                <div class="range-slider" id="sp-hd" data-val="20-70"></div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+        <tr class="alt">
+            <td class="label">
+                <div>
+                    <label class="label_check" for="all5">
+                        <input name="KPI" id="all5" type="checkbox" />
+                    </label>
+                    Processor
+                    <span>(<span class="min"></span> - <span class="max"></span> )</span>
+                </div>
+            </td>
+            <td class="slider">
+                <div class="range-slider" id="sp-processor" data-val="32-50"></div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+        <tr>
+            <td class="label">
+                <div>
+                    <label class="label_check" >
+                        <input name="KPI"  type="checkbox" />
+                    </label>
+                    Network Usage
+                    <span>(<span class="min"></span> - <span class="max"></span> )</span>
+                </div>
+            </td>
+            <td class="slider">
+                <div class="range-slider" id="sp-peak-usage" data-val="20-70"></div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<h3>Hardware counts <i class="arrow"></i>
+    <a href="javascript:" class="btn mini-btn edit">EDIT</a>
+    <a href="javascript:" class="btn mini-btn save">SAVE</a>
+</h3>
+<div>
+    <table>
+        <tbody>
+        <tr>
+            <td class="label">
+                <div>
+                    <label class="label_check" >
+                        <input name="KPI"  type="checkbox" />
+                    </label>
+                    Access Panel
+                    <span>(<span class="min"></span> - <span class="max"></span> )</span>
+                </div>
+            </td>
+            <td class="slider">
+                <div class="range-slider" id="hc-ap" data-val="30-75"></div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+
+        <tr class="alt">
+            <td class="label">
+                <div>
+                    <label class="label_check" >
+                        <input name="KPI"  type="checkbox" />
+                    </label>
+                    Readers
+                    <span>(<span class="min"></span> - <span class="max"></span> )</span>
+                </div>
+            </td>
+            <td class="slider">
+                <div class="range-slider" id="hc-re" data-val="20-65"></div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+
+        <tr>
+            <td class="label">
+                <div>
+                    <label class="label_check" >
+                        <input name="KPI"  type="checkbox" />
+                    </label>
+                    Input
+                    <span>(<span class="min"></span> - <span class="max"></span> )</span>
+                </div>
+            </td>
+            <td class="slider">
+                <div class="range-slider" id="hc-in" data-val="10-85"></div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+
+        <tr class="alt">
+            <td class="label">
+                <div>
+                    <label class="label_check" >
+                        <input name="KPI"  type="checkbox" />
+                    </label>
+                    Output
+                    <span>(<span class="min"></span> - <span class="max"></span> )</span>
+                </div>
+            </td>
+            <td class="slider">
+                <div class="range-slider" id="hc-ou" data-val="20-65"></div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+
+        </tbody>
+    </table>
+</div>
+
+<h3>Communication server error monitor <i class="arrow"></i>
+    <a href="javascript:" class="btn mini-btn edit">EDIT</a>
+    <a href="javascript:" class="btn mini-btn save">SAVE</a>
+</h3>
+<div>
+    <table>
+        <tbody>
+        <tr>
+            <td class="label">
+                <div>
+                    <label class="label_check" >
+                        <input name="KPI"  type="checkbox" />
+                    </label>
+                    Access Panel
+                    <span>(<span class="min"></span> - <span class="max"></span> )</span>
+                </div>
+            </td>
+            <td class="slider">
+                <div class="range-slider" id="hc-ap" data-val="30-75"></div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- OnGuard Alarm -->
+<h3> OnGuard alarm <i class="arrow"></i>
+    <a href="javascript:" class="btn mini-btn edit">EDIT</a>
+    <a href="javascript:" class="btn mini-btn save">SAVE</a>
+</h3>
+<div>
+    <table>
+        <tbody>
+        <tr>
+            <td class="label">
+                <div>
+
+                    <label class="label_check" for="all4">
+                        <input name="KPI" id="all4" type="checkbox" />
+                    </label>
+                    Access Granted
+                    <span>(<span class="min"></span> - <span class="max"></span> )</span>
+                </div>
+            </td>
+            <td class="slider">
+                <div class="range-slider" id="sp-all-events" data-val="20-70"></div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+        <tr class="alt">
+            <td class="label">
+                <div>
+                    <label class="label_check" >
+                        <input name="KPI"  type="checkbox" checked="checked" />
+                    </label>
+                    Invalid Pin
+                    <span>(<span class="min"></span> - <span class="max"></span> )</span>
+                </div>
+            </td>
+            <td class="slider">
+                <div class="range-slider" id="sp-dfo" data-val="30-50"></div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+        <tr >
+            <td class="label">
+                <div>
+                    <label class="label_check" >
+                        <input name="KPI"  type="checkbox" checked="checked" />
+                    </label>
+                    Door Forced Open
+                    <span>(<span class="min"></span> - <span class="max"></span> )</span>
+                </div>
+            </td>
+            <td class="slider">
+                <div class="range-slider" id="sp-dfo" data-val="30-50"></div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+
+
+        <tr class="alt">
+            <td class="label">
+                <div>
+                    <label class="label_check" >
+                        <input name="KPI"  type="checkbox" checked="checked" />
+                    </label>
+                    Door Held Open
+                    <span>(<span class="min"></span> - <span class="max"></span> )</span>
+                </div>
+            </td>
+            <td class="slider">
+                <div class="range-slider" id="sp-dfo" data-val="30-50"></div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+
+
+        </tbody>
+    </table>
+</div>
+<!-- OnGuard Alarm End -->
+
+<h3>Comm server log file growth  <i class="arrow"></i>
+    <a href="javascript:" class="btn mini-btn btn-add-server"><i class="add">&nbsp;</i></a>
+    <a href="javascript:" class="btn mini-btn edit">EDIT</a>
+    <a href="javascript:" class="btn mini-btn save">SAVE</a>
+</h3>
+<div>
+    <table class="tbl-error-log" style="width:99%;">
+        <tbody>
+        <tr class="e-labels">
+            <td class="e-name">
+                <div>Error Name
+                </div>
+            </td>
+            <td class="e-date">
+                <div>Date Created</div>
+            </td>
+            <td class="e-memory">
+                <div>Memory</div>
+            </td>
+            <td class="e-status">
+                <div>Status</div>
+            </td>
+            <td class="e-close"></td>
+        </tr>
+        <tr>
+            <td class="label e-name">
+                <div>
+                    <label class="label_check" >
+                        <input name="KPI"  type="checkbox" />
+                    </label>
+                    Lorem Ipsum Error Name
+                </div>
+            </td>
+            <td class="label">
+                <div>24-09-2014 09:00:25</div>
+            </td>
+            <td class="label">
+                <div>14.5 M</div>
+            </td>
+            <td class="label">
+                <div>Active</div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+        <tr>
+            <td class="label e-name">
+                <div>
+                    <label class="label_check" >
+                        <input name="KPI"  type="checkbox" />
+                    </label>
+                    Lorem Ipsum Error Name
+                </div>
+            </td>
+            <td class="label">
+                <div>24-09-2014 09:00:25</div>
+            </td>
+            <td class="label">
+                <div>14.5 M</div>
+            </td>
+            <td class="label">
+                <div>Active</div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+        <tr>
+            <td class="label e-name">
+                <div>
+                    <label class="label_check" >
+                        <input name="KPI"  type="checkbox" />
+                    </label>
+                    Lorem Ipsum Error Name
+                </div>
+            </td>
+            <td class="label">
+                <div>24-09-2014 09:00:25</div>
+            </td>
+            <td class="label">
+                <div>14.5 M</div>
+            </td>
+            <td class="label">
+                <div>Active</div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+        <tr>
+            <td class="label e-name">
+                <div>
+                    <label class="label_check" >
+                        <input name="KPI"  type="checkbox" />
+                    </label>
+                    Lorem Ipsum Error Name
+                </div>
+            </td>
+            <td class="label">
+                <div>24-09-2014 09:00:25</div>
+            </td>
+            <td class="label">
+                <div>14.5 M</div>
+            </td>
+            <td class="label">
+                <div>Active</div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+        <tr>
+            <td class="label e-name">
+                <div>
+                    <label class="label_check" >
+                        <input name="KPI"  type="checkbox" />
+                    </label>
+                    Lorem Ipsum Error Name
+                </div>
+            </td>
+            <td class="label">
+                <div>24-09-2014 09:00:25</div>
+            </td>
+            <td class="label">
+                <div>14.5 M</div>
+            </td>
+            <td class="label">
+                <div>Active</div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+        <tr>
+            <td class="label e-name">
+                <div>
+                    <label class="label_check" >
+                        <input name="KPI"  type="checkbox" />
+                    </label>
+                    Lorem Ipsum Error Name
+                </div>
+            </td>
+            <td class="label">
+                <div>24-09-2014 09:00:25</div>
+            </td>
+            <td class="label">
+                <div>14.5 M</div>
+            </td>
+            <td class="label">
+                <div>Active</div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+        <tr>
+            <td class="label e-name">
+                <div>
+                    <label class="label_check" >
+                        <input name="KPI"  type="checkbox" />
+                    </label>
+                    Lorem Ipsum Error Name
+                </div>
+            </td>
+            <td class="label">
+                <div>24-09-2014 09:00:25</div>
+            </td>
+            <td class="label">
+                <div>14.5 M</div>
+            </td>
+            <td class="label">
+                <div>Active</div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+        <tr>
+            <td class="label e-name">
+                <div>
+                    <label class="label_check" >
+                        <input name="KPI"  type="checkbox" />
+                    </label>
+                    Lorem Ipsum Error Name
+                </div>
+            </td>
+            <td class="label">
+                <div>24-09-2014 09:00:25</div>
+            </td>
+            <td class="label">
+                <div>14.5 M</div>
+            </td>
+            <td class="label">
+                <div>Active</div>
+            </td>
+            <td class="close"><a href="javascript:"></a></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+
+</body>
+</html>
